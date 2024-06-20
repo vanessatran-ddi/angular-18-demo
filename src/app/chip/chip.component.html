@@ -1,0 +1,19 @@
+<p>chip works!</p>
+<h1>Chip</h1>
+
+<h2>Basic</h2>
+<goab-chip content="Chip Text"></goab-chip>
+
+<h2>Leading icon</h2>
+<goab-chip content="Chip Text" leadingicon="close-circle"></goab-chip>
+
+<h2>Delete event</h2>
+@for (chip of chips; track chip) {
+  <goab-chip [content]="chip" (click)="deleteChip(chip)" [deletable]="true"></goab-chip>
+}
+<h2>Error state</h2>
+<goab-chip content="Chip Text" [error]="true"></goab-chip>
+<goab-chip content="Chip Text" [error]="true" [deletable]="true" (click)="onClick()"></goab-chip>
+
+<h2>Margin Spacing</h2>
+<goab-chip content="Chip Text" mt="m" mb="xs" ml="xl" mr="2xl"></goab-chip>

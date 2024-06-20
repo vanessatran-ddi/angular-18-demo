@@ -1,0 +1,23 @@
+<goab-table width="100%" mb="xl">
+  <thead>
+  <tr>
+    <th>First name</th>
+    <th>Last name</th>
+    <th>Age</th>
+  </tr>
+  </thead>
+  <tbody>
+  @for(user of pageUsers;track user.firstName)
+  {
+    <tr>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td>{{ user.age }}</td>
+    </tr>
+  }
+
+  </tbody>
+</goab-table>
+
+<goab-pagination [itemCount]="users.length" [perPageCount]="10" [pageNumber]="page"
+                 (onChange)="handlePageChange($event)"></goab-pagination>
