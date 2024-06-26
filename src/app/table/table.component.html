@@ -1,32 +1,206 @@
-<h3>Normal</h3>
-<goab-table width="100%" mb="xl" (onSort)="handleSort($event)">
+<goa-table mb="xl" (_sort)="handleSort($event)">
   <thead>
   <tr>
     <th>
-      <goab-table-sort-header name="firstName">First name and really long header</goab-table-sort-header>
+      <goa-table-sort-header name="firstName"
+      >First name and really long header</goa-table-sort-header
+      >
     </th>
     <th>
-      <goab-table-sort-header name="lastName">Last name</goab-table-sort-header>
+      <goa-table-sort-header name="lastName">Last name</goa-table-sort-header>
     </th>
-    <th class="goab-table-number-header">
+    <th>
       Age
-      <!--      <goab-table-sort-header name="age" direction="asc">-->
-      <!--        Age</goab-table-sort-header>-->
+    </th>
+    <th class="goa-table-number-header">
+      Age
+      <!--      <goa-table-sort-header name="age" direction="asc">-->
+      <!--        Age</goa-table-sort-header>-->
 
+    </th>
+    <th>
+      Age
+    </th>
+    <th>
+      Age
+    </th>
+    <th>
+      Age
+    </th>
+    <th>
+      Age
     </th>
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let user of users; index as i">
+    @for(user of users; track user.firstName) {
+  <tr>
     <td>{{ user.firstName }}</td>
     <td>{{ user.lastName }}</td>
-    <td class="goab-table-number-column">{{ user.age }}</td>
+    <td class="goa-table-number-column">{{ user.age }}</td>
+    <td class="goa-table-number-column">{{ user.age }}</td>
+    <td class="goa-table-number-column">{{ user.age }}</td>
+    <td class="goa-table-number-column">{{ user.age }}</td>
+    <td class="goa-table-number-column">{{ user.age }}</td>
+    <td class="goa-table-number-column">{{ user.age }}</td>
   </tr>
+    }
   </tbody>
-</goab-table>
+</goa-table>
+<goa-block>
+  <goa-table mb="xl" (_sort)="handleSort($event)">
+    <thead>
+    <tr>
+      <th>
+        <goa-table-sort-header name="firstName"
+        >First name and really long header</goa-table-sort-header
+        >
+      </th>
+      <th>
+        <goa-table-sort-header name="lastName">Last name</goa-table-sort-header>
+      </th>
+      <th>
+        Age
+      </th>
+      <th class="goa-table-number-header">
+        Age
+        <!--      <goa-table-sort-header name="age" direction="asc">-->
+        <!--        Age</goa-table-sort-header>-->
 
-<h3>Relaxed</h3>
-<goab-table width="500px" mb="xl" variant="relaxed">
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(user of users; track user.firstName) {
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+    }
+    </tbody>
+  </goa-table>
+
+</goa-block>
+
+<div style="background-color: red; width:200px">
+  <goa-table mb="xl" (_sort)="handleSort($event)">
+    <thead>
+    <tr>
+      <th>
+        <goa-table-sort-header name="firstName"
+        >First name and really long header</goa-table-sort-header
+        >
+      </th>
+      <th>
+        <goa-table-sort-header name="lastName">Last name</goa-table-sort-header>
+      </th>
+      <th>
+        Age
+      </th>
+      <th class="goa-table-number-header">
+        Age
+        <!--      <goa-table-sort-header name="age" direction="asc">-->
+        <!--        Age</goa-table-sort-header>-->
+
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(user of users; track user.firstName){
+      <tr>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+      </tr>
+    }
+    </tbody>
+  </goa-table>
+
+</div>
+<goa-table mb="xl" (_sort)="handleSort($event)">
+  <thead>
+  <tr>
+    <th>
+      <goa-table-sort-header name="firstName"
+      >First name and really long header</goa-table-sort-header
+      >
+    </th>
+    <th>
+      <goa-table-sort-header name="lastName">Last name</goa-table-sort-header>
+    </th>
+    <th>
+      Age
+    </th>
+    <th class="goa-table-number-header">
+      Age
+      <!--      <goa-table-sort-header name="age" direction="asc">-->
+      <!--        Age</goa-table-sort-header>-->
+
+    </th>
+    <th>
+      Age
+    </th>
+    <th>
+      Age
+    </th>
+    <th>
+      Age
+    </th>
+    <th>
+      Age
+    </th>
+  </tr>
+  </thead>
+  <tbody>
+  @for (user of users; track user.firstName) {
+    <tr>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+      <td class="goa-table-number-column">{{ user.age }}</td>
+    </tr>
+  }
+  </tbody>
+</goa-table>
+
+<goa-table width="500px" mb="xl" variant="relaxed">
   <thead>
   <tr>
     <th>Col 1</th>
@@ -37,21 +211,184 @@
   <tbody>
   <tr>
     <td>
-      <goab-block alignment="center" gap="xs">
-        <goab-icon type="alarm"></goab-icon>Item 1
-      </goab-block>
+      <goa-block alignment="center" gap="xs">
+        <goa-icon type="alarm"></goa-icon>Item 1
+      </goa-block>
     </td>
     <td>Item 2</td>
     <td>Item 3</td>
   </tr>
   <tr>
     <td>
-      <goab-block alignment="center" gap="xs">
-        <goab-icon type="alarm"></goab-icon>Item 1
-      </goab-block>
+      <goa-block alignment="center" gap="xs">
+        <goa-icon type="alarm"></goa-icon>Item 1
+      </goa-block>
     </td>
     <td>Item 2</td>
     <td>Item 3</td>
   </tr>
   </tbody>
-</goab-table>
+</goa-table>
+
+
+
+<div style="width:100%; background-color: grey">
+  <goa-table mb="xl" (_sort)="handleSort($event)">
+    <thead>
+    <tr>
+      <th >
+        <goa-table-sort-header name="firstName"
+        >First name and really long header</goa-table-sort-header
+        >
+      </th>
+      <th>
+        <goa-table-sort-header name="lastName">Last name</goa-table-sort-header>
+      </th>
+      <th>
+        Age
+      </th>
+      <th class="goa-table-number-header">
+        Age
+        <!--      <goa-table-sort-header name="age" direction="asc">-->
+        <!--        Age</goa-table-sort-header>-->
+
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+      <th>
+        Age
+      </th>
+    </tr>
+    </thead>
+    <tbody>
+    @for(user of users; track user.firstName) {
+      <tr>
+        <td>{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+        <td class="goa-table-number-column">{{ user.age }}</td>
+      </tr>
+    }
+    </tbody>
+  </goa-table>
+
+</div>

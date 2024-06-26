@@ -1,25 +1,26 @@
-import { Component } from '@angular/core';
-import {GoABRadioGroupOnChangeDetail} from "@abgov/ui-components-common";
-import {GoABFormItem, GoABRadioGroup, GoABRadioItem} from "@abgov/angular-components";
+import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
+// import {GoABRadioGroupOnChangeDetail} from "@abgov/ui-components-common";
+// import {GoABFormItem, GoABRadioGroup, GoABRadioItem} from "@abgov/angular-components";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-radio',
   standalone: true,
-  imports: [ GoABRadioGroup,
-    GoABRadioItem,
-    GoABFormItem,
+  imports: [
+    // GoABRadioGroup,
+    // GoABRadioItem,
+    // GoABFormItem,
     ReactiveFormsModule,],
   templateUrl: './radio.component.html',
-  styleUrl: './radio.component.css'
+  styleUrl: './radio.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class RadioComponent {
-  constructor() { }
+export class RadioComponent implements OnInit {
+  constructor() {}
 
   boundVal = "";
-  radioValue = "orange"
 
-  reactiveFormCtrl = new FormControl("blue");
+  reactiveFormCtrl = new FormControl("red");
 
   dynamicItems = [
     {
@@ -38,8 +39,20 @@ export class RadioComponent {
     },
   ];
 
-  onChange(e: GoABRadioGroupOnChangeDetail) {
-    console.log("onChange", e.name, e.value);
-    this.radioValue = e.value;
+  ngOnInit() {
+    this.reactiveFormCtrl.setValue("orange");
+    this.reactiveFormCtrl.registerOnChange((val: any) => {
+      console.log("reactiveFormCtrl", val);
+    });
+  }
+
+  onClick() {
+    console.log("clicked");
+    this.reactiveFormCtrl.setValue("red");
+  }
+
+
+  onChange(e: any) {
+    console.log("onChange", e.detail.name, e.detail.value);
   }
 }

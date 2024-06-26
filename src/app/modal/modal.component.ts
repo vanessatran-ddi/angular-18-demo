@@ -1,37 +1,35 @@
-import { Component } from '@angular/core';
-import {
-  GoABButton,
-  GoABButtonGroup, GoABDropdown, GoABDropdownItem,
-  GoABFormItem,
-  GoABInput,
-  GoABModal
-} from "@abgov/angular-components";
+import {Component, CUSTOM_ELEMENTS_SCHEMA, ElementRef, OnInit, ViewChild} from '@angular/core';
+// import {
+//   GoABButton,
+//   GoABButtonGroup, GoABDropdown, GoABDropdownItem,
+//   GoABFormItem,
+//   GoABInput,
+//   GoABModal
+// } from "@abgov/angular-components";
 import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [GoABModal,
-    GoABButton,
-    GoABButtonGroup,
-    GoABFormItem,
-    GoABInput,
-    GoABDropdown,
-    GoABDropdownItem,],
+  // imports: [GoABModal,
+  //   GoABButton,
+  //   GoABButtonGroup,
+  //   GoABFormItem,
+  //   GoABInput,
+  //   GoABDropdown,
+  //   GoABDropdownItem,],
   templateUrl: './modal.component.html',
-  styleUrl: './modal.component.css'
+  styleUrl: './modal.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class ModalComponent {
-  constructor(private router: Router) { }
+export class ModalComponent implements OnInit {
+  @ViewChild("input") input: ElementRef | undefined;
+  constructor(private router: Router) {this.text = "";}
 
   transition: "fast" | "slow" | "none" = "fast";
 
-  calloutVariant:
-    | "information"
-    | "important"
-    | "success"
-    | "emergency"
-    | "event" = "information";
+  calloutVariant: "information" | "important" | "success" | "emergency" | "event" =
+    "information";
 
   isOpen = false;
   isOpen2 = false;
@@ -40,13 +38,28 @@ export class ModalComponent {
   isOpen5 = false;
   isOpen6 = false;
   isOpen7 = false;
+  text: string;
 
+  isAddDeliveryAddressModalOpen = false;
+  onChange() {}
   openModal() {
     this.isOpen = true;
   }
-
   closeModal() {
     this.isOpen = false;
+  }
+
+  openAddDeliveryAddressModal() {
+    console.log("openAddDeliveryAddressModal ", this.input);
+    setTimeout(() => {
+      // this will make the execution after the above boolean has changed
+      this.input?.nativeElement.focus();
+    }, 0);
+    this.isAddDeliveryAddressModalOpen = true;
+  }
+
+  closeAddDeliveryAddressModal() {
+    this.isAddDeliveryAddressModalOpen = false;
   }
 
   openModal2() {
@@ -92,14 +105,13 @@ export class ModalComponent {
   }
 
   showCalloutModal(
-    calloutVariant:
-      | "information"
-      | "important"
-      | "success"
-      | "emergency"
-      | "event"
+    calloutVariant: "information" | "important" | "success" | "emergency" | "event",
   ) {
     this.calloutVariant = calloutVariant;
     this.isOpen5 = true;
+  }
+
+  ngOnInit() {
+    setTimeout(() => this.text = "Dynamic text", 3000);
   }
 }

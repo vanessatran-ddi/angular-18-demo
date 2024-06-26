@@ -1,6 +1,6 @@
-import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
-import {GoABBadge, GoABDatePicker, GoABFormItem, GoABInput} from "@abgov/angular-components";
+import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
+import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+// import {GoABBadge, GoABDatePicker, GoABFormItem, GoABInput} from "@abgov/angular-components";
 import {JsonPipe} from "@angular/common";
 import { format, parseISO } from "date-fns";
 interface User {
@@ -12,17 +12,35 @@ interface User {
   selector: 'app-input',
   standalone: true,
   imports: [
-    GoABInput,
-    GoABDatePicker,
-    GoABBadge,
-    GoABFormItem,
+    // GoABInput,
+    // GoABDatePicker,
+    // GoABBadge,
+    // GoABFormItem,
     JsonPipe,
     ReactiveFormsModule,
   ],
   templateUrl: './input.component.html',
-  styleUrl: './input.component.css'
+  styleUrl: './input.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class InputComponent implements OnInit {
+
+  minDate1 = new Date().toISOString();
+  maxDate1 = new Date().toISOString();
+
+  public formGroup1 = new FormGroup({
+    isApplyingOnBehalf: new FormControl(null, { validators: [Validators.required] }),
+    isInAlberta: new FormControl(null, { validators: [Validators.required] }),
+    immigrationStatus: new FormControl(null, { validators: [Validators.required] }),
+    birthDate: new FormControl("", { validators: [Validators.required] }),
+  });
+
+
+  formGroup = new FormGroup({
+    firstInput: new FormControl(""),
+    secondInput: new FormControl(""),
+  });
+  testFormCtrl = new FormControl("test");
   date = new Date();
   boundDate = format(this.date, "yyyy-MM-dd");
   formatDate = format(this.date, "yyyy-MM-dd");
@@ -44,14 +62,26 @@ export class InputComponent implements OnInit {
 
   users: User[] = [];
 
-  form = new FormGroup({
-    first: new FormControl("reactive form")
-  })
+  value= "";
 
-  onSubmit(e: any) {
-    console.log("onSubmit", this.form);
+  tuitionAmount: number|undefined;
+  suppliesAmount: number|undefined;
+  othersAmount: number|undefined;
+
+  onChangeTuitionAmount(event: Event) {
+    this.tuitionAmount = (event as CustomEvent).detail.value as number;
+  }
+  onChangeSuppliesAmount(event: Event) {
+    this.suppliesAmount = (event as CustomEvent).detail.value as number;
+  }
+  onChangeOthersAmount(event: Event) {
+    this.othersAmount = (event as CustomEvent).detail.value as number;
   }
 
+
+  onChange(event: Event) {
+    this.value = (event as CustomEvent).detail.value;
+  }
   getUser() {
     console.log("getting user");
     return {
@@ -68,7 +98,7 @@ export class InputComponent implements OnInit {
   }
 
   updateInput(event: any) {
-    this.wcVal = event.value;
+    this.wcVal = event.detail.value;
   }
 
   getDateWithMonthOffset(offset: number) {

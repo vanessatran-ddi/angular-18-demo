@@ -1,56 +1,83 @@
-<goab-grid minChildWidth="30ch" gap="xl">
-  <goab-card [elevation]="0" height="max">
-    <goab-card-content>
+<div>
+  <goa-container width="200px">Container 1</goa-container>
+  <goa-container width="100%">Container 2</goa-container>
+</div>
+
+<goa-grid minChildWidth="30ch">
+  <goa-form-item label="Basic dropdown" width="100%">
+    <goa-dropdown name="item" (_change)="onChange($event)">
+      <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+      <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+      <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+    </goa-dropdown>
+  </goa-form-item>
+  <goa-form-item label="Basic dropdown" width="100%">
+    <goa-input name="item" (_change)="onChange($event)"></goa-input>
+  </goa-form-item>
+  <goa-form-item label="Basic dropdown" width="100%">
+    <goa-dropdown name="item" (_change)="onChange($event)">
+      <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+      <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+      <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+    </goa-dropdown>
+  </goa-form-item>
+  <goa-container>
+    <h3>This is the card</h3>
+    <goa-form-item label="Basic dropdown">
+      <goa-dropdown name="item" (_change)="onChange($event)">
+        <goa-dropdown-item value="red" label="Red"></goa-dropdown-item>
+        <goa-dropdown-item value="green" label="Green"></goa-dropdown-item>
+        <goa-dropdown-item value="blue" label="Blue"></goa-dropdown-item>
+      </goa-dropdown>
+    </goa-form-item>
+    <p>
+      Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
+      cillum sint consectetur cupidatat.
+    </p>
+  </goa-container>
+  <goa-card elevation="1" height="max">
+    <goa-card-content>
       <h3>This is the card</h3>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.
       </p>
-    </goab-card-content>
-  </goab-card>
-  <goab-card [elevation]="1" height="max">
-    <goab-card-content>
+    </goa-card-content>
+  </goa-card>
+  <goa-card elevation="1" height="max">
+    <goa-card-content>
       <h3>This is the card</h3>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.
       </p>
-    </goab-card-content>
-  </goab-card>
-  <goab-card [elevation]="2" height="max">
-    <goab-card-content>
+    </goa-card-content>
+  </goa-card>
+  <goa-card elevation="1">
+    <goa-card-content>
       <h3>This is the card</h3>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.
       </p>
-    </goab-card-content>
-  </goab-card>
-  <goab-card [elevation]="3">
-    <goab-card-content>
+    </goa-card-content>
+  </goa-card>
+  <goa-card elevation="1">
+    <goa-card-content>
       <h3>This is the card</h3>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.
       </p>
-    </goab-card-content>
-  </goab-card>
-  <goab-card [elevation]="4">
-    <goab-card-content>
+    </goa-card-content>
+  </goa-card>
+  <goa-card elevation="1">
+    <goa-card-content>
       <h3>This is the card</h3>
       <p>
         Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
         cillum sint consectetur cupidatat.
       </p>
-    </goab-card-content>
-  </goab-card>
-  <goab-card [elevation]="5">
-    <goab-card-content>
-      <h3>This is the card</h3>
-      <p>
-        Lorem ipsum dolor sit amet, qui minim labore adipisicing minim sint
-        cillum sint consectetur cupidatat.
-      </p>
-    </goab-card-content>
-  </goab-card>
-</goab-grid>
+    </goa-card-content>
+  </goa-card>
+</goa-grid>

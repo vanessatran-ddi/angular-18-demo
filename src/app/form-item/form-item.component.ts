@@ -1,23 +1,23 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {
-  GoABBlock,
-  GoABButton,
-  GoABDropdown, GoABDropdownItem,
-  GoABFormItem,
-  GoABInput
-} from "@abgov/angular-components";
+// import {
+//   GoABBlock,
+//   GoABButton,
+//   GoABDropdown, GoABDropdownItem,
+//   GoABFormItem,
+//   GoABInput
+// } from "@abgov/angular-components";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 
 @Component({
   selector: 'app-form-item',
   standalone: true,
   imports: [
-    GoABInput,
-    GoABFormItem,
-    GoABBlock,
-    GoABButton,
-    GoABDropdown,
-    GoABDropdownItem,
+    // GoABInput,
+    // GoABFormItem,
+    // GoABBlock,
+    // GoABButton,
+    // GoABDropdown,
+    // GoABDropdownItem,
     ReactiveFormsModule,
   ],
   templateUrl: './form-item.component.html',
@@ -25,6 +25,7 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class FormItemComponent {
+  value: string = "hello";
   formGroup = new FormGroup({
     txtRequesterName: new FormControl(),
   })
@@ -41,12 +42,16 @@ export class FormItemComponent {
       descriptionFormCtrl: this.descriptionFormCtrl,
     });
   }
-  searchRequesterClickIcon() {
+  searchRequesterClickIcon () {
     console.log("Current value ", this.formGroup.get("txtRequesterName")?.value);
     this.formGroup.get("txtRequesterName")?.patchValue("");
     console.log("New value ", this.formGroup.get("txtRequesterName")?.value);
   }
 
+  onChange(event: Event) {
+    console.log("Event ", event);
+    console.log("Value ", (event.target as HTMLInputElement).value);
+  }
   onSubmit() {
     this.colorFormCtrl.setValidators([Validators.required]);
     this.colorFormCtrl.updateValueAndValidity();

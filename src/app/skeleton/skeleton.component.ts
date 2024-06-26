@@ -1,12 +1,13 @@
-import { Component } from '@angular/core';
-import {GoABSkeleton} from "@abgov/angular-components";
+import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+// import {GoABSkeleton} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-skeleton',
   standalone: true,
-  imports: [ GoABSkeleton,],
+  // imports: [ GoABSkeleton,],
   templateUrl: './skeleton.component.html',
-  styleUrl: './skeleton.component.css'
+  styleUrl: './skeleton.component.css',
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class SkeletonComponent {
 

@@ -1,12 +1,12 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {GoABButton, GoABCircularProgress} from "@abgov/angular-components";
+// import {GoABButton, GoABCircularProgress} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-circular-progress',
   standalone: true,
   imports: [
-    GoABCircularProgress,
-    GoABButton
+    // GoABCircularProgress,
+    // GoABButton
   ],
   templateUrl: './circular-progress.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

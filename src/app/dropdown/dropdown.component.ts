@@ -1,6 +1,6 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import { GoABContainer, GoABDatePicker, GoABDropdown, GoABDropdownItem, GoABFormItem, GoABInput, GoABSpacer } from "@abgov/angular-components";
-import { GoABDatePickerOnChangeDetail, GoABDropdownOnChangeDetail } from "@abgov/ui-components-common";
+// import { GoABContainer, GoABDatePicker, GoABDropdown, GoABDropdownItem, GoABFormItem, GoABInput, GoABSpacer } from "@abgov/angular-components";
+// import { GoABDatePickerOnChangeDetail, GoABDropdownOnChangeDetail } from "@abgov/ui-components-common";
 import { CommonModule } from "@angular/common";
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Countries, CountrySubdivisions} from "./countries.data";
@@ -9,13 +9,13 @@ import {Countries, CountrySubdivisions} from "./countries.data";
   selector: 'app-dropdown',
   standalone: true,
   imports: [
-    GoABDropdown,
-    GoABDropdownItem,
-    GoABFormItem,
-    GoABContainer,
-    GoABDatePicker,
-    GoABInput,
-    GoABSpacer,
+    // GoABDropdown,
+    // GoABDropdownItem,
+    // GoABFormItem,
+    // GoABContainer,
+    // GoABDatePicker,
+    // GoABInput,
+    // GoABSpacer,
     ReactiveFormsModule,
     CommonModule,
   ],
@@ -27,35 +27,11 @@ export class DropdownComponent {
   colors: string[] = [];
   selectedColor = "red";
   boundVal = "";
-  reactiveFormCtrl = new FormControl({ value: "green", disabled: false });
-  disabledFormCtrl = new FormControl({ value: "green", disabled: true });
-
-  dropdownCtrl = new FormControl('');
-  form = new FormGroup({
-    option: new FormControl('')
-  });
-
-  item = new Date();
-  onChange(e: GoABDatePickerOnChangeDetail) {
-    // handle change
-    console.log(e);
-  }
-
-  ngOnInit() {
-    console.log("setting colors in 3 secs")
-    setTimeout(() => this.colors = ["Chris", "James", "John"], 3000);
-  }
+  reactiveFormCtrl = new FormControl({ value: "green", disabled: true });
 
   color = new FormControl("green");
 
-  provinces: string[] = [
-    "BC",
-    "Alberta",
-    "Saskatchewan",
-    "Manitoba",
-    "Ontario",
-    "Quebec",
-  ];
+  provinces: string[] = [];
 
   /* eslint-disable @typescript-eslint/naming-convention */
   cities: Record<string, string[]> = {
@@ -98,60 +74,37 @@ export class DropdownComponent {
     postalCode: FormControl<string | null>;
   }>;
 
-
-
   constructor(private fb: FormBuilder) {
     this.fg = this.fb.group({
-      businessName: [null as (string | null), []],
-      address1: [null as (string | null), []],
-      address2: [null as (string | null), []],
-      locality: [null as (string | null), []],
-      region: [null as (string | null), []],
-      country: [null as (string | null), []],
-      postalCode: [null as (string | null), []]
+      businessName: [null as string | null, []],
+      address1: [null as string | null, []],
+      address2: [null as string | null, []],
+      locality: [null as string | null, []],
+      region: [null as string | null, []],
+      country: [null as string | null, []],
+      postalCode: [null as string | null, []],
     });
   }
 
-  selectColor(event: GoABDropdownOnChangeDetail) {
+  selectColor(event: any) {
     console.log("Select Color", event);
-    this.selectedColor = event.value || "";
+    this.selectedColor = event.detail.value;
   }
 
   selectProvince(event: any) {
     this.pcities = this.cities[event.detail.value];
   }
 
-  handleSelectChange(event: any) {
-    console.log("select change", event.detail.value, event);
+  onChange(event: any) {
+    console.log("select change dynamic color ", event.detail.value, event);
   }
+  ngOnInit() {
 
-  public readonly fruits = [
-    { value: "ghi789", label: "Cherry" },
-    { value: "jkl012", label: "Date" },
-    { value: "mno345", label: "Elderberry" },
-    { value: "pqr678", label: "Fig" },
-    { value: "stu901", label: "Grape" },
-    { value: "vwx234", label: "Honeydew" },
-    { value: "yza567", label: "Kiwi" },
-    { value: "bcd890", label: "Lemon" }
-  ];
+    setTimeout(() => this.colors = ["red", "green", "blue"], 1);
 
-  options = [
-    {
-      value: 'All',
-      displayValue: 'All',
-    },
-    {
-      value: 'One',
-      displayValue: 'One',
-    },
-    {
-      value: 'Two',
-      displayValue: 'Two',
-    }
-  ];
-
-  onChangeDropdown(e: GoABDropdownOnChangeDetail) {
-    console.log(e)
+    // listen to fg changes
+    this.fg.valueChanges.subscribe(value => {
+      console.log('Form value changed:', value);
+    });
   }
 }
