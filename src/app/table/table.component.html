@@ -17,11 +17,14 @@
   </tr>
   </thead>
   <tbody>
-  <tr *ngFor="let user of users; index as i">
-    <td>{{ user.firstName }}</td>
-    <td>{{ user.lastName }}</td>
-    <td class="goab-table-number-column">{{ user.age }}</td>
-  </tr>
+  @for(user of users; track user.firstName) {
+    <tr>
+      <td>{{ user.firstName }}</td>
+      <td>{{ user.lastName }}</td>
+      <td class="goab-table-number-column">{{ user.age }}</td>
+    </tr>
+  }
+
   </tbody>
 </goab-table>
 
