@@ -1,16 +1,13 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
 // import {GoABRadioGroupOnChangeDetail} from "@abgov/ui-components-common";
 // import {GoABFormItem, GoABRadioGroup, GoABRadioItem} from "@abgov/angular-components";
-import {FormControl, ReactiveFormsModule} from "@angular/forms";
+import {FormControl, FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-radio',
   standalone: true,
   imports: [
-    // GoABRadioGroup,
-    // GoABRadioItem,
-    // GoABFormItem,
-    ReactiveFormsModule,],
+    ReactiveFormsModule, FormsModule],
   templateUrl: './radio.component.html',
   styleUrl: './radio.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
