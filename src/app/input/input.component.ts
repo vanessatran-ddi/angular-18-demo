@@ -1,5 +1,5 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 // import {GoABBadge, GoABDatePicker, GoABFormItem, GoABInput} from "@abgov/angular-components";
 import {JsonPipe} from "@angular/common";
 import { format, parseISO } from "date-fns";
@@ -12,19 +12,16 @@ interface User {
   selector: 'app-input',
   standalone: true,
   imports: [
-    // GoABInput,
-    // GoABDatePicker,
-    // GoABBadge,
-    // GoABFormItem,
     JsonPipe,
     ReactiveFormsModule,
+    FormsModule,
   ],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class InputComponent implements OnInit {
-
+  yourModelProperty = "Hello World";
   minDate1 = new Date().toISOString();
   maxDate1 = new Date().toISOString();
 
