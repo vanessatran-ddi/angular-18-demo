@@ -16,7 +16,7 @@
 
 
 <h2>Footer with secondary navigation</h2>
-<goab-app-footer-nav-section slot="nav" maxColumnCount="3">
+<goab-app-footer-nav-section slot="nav" [maxColumnCount]="3">
   <a href="a.html">Arts and culture</a>
   <a href="b.html">Education and training</a>
   <a href="c.html">Family and social supports</a>
@@ -51,7 +51,7 @@
 
 <h2>Footer with secondary navigation with multi column selection</h2>
 <goa-app-footer id="navigation-only-multiselection-multicolumn">
-  <goab-app-footer-nav-section slot="nav" name="All services" maxColumnCount="2">
+  <goab-app-footer-nav-section slot="nav" name="All services" [maxColumnCount]="2">
     <a href="a.html">Arts and culture</a>
     <a href="b.html">Education and training</a>
     <a href="c.html">Family and social supports</a>
