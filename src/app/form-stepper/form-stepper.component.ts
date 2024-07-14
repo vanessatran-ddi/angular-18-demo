@@ -16,7 +16,7 @@ import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class FormStepperComponent {
-  step = 2;
+  step = -1;
   // controlled by the user based on form completion
   status = ["complete", "complete", "incomplete", "incomplete"];
   updateStep(event: Event) {
