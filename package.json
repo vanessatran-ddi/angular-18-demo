@@ -10,8 +10,8 @@
   },
   "private": true,
   "dependencies": {
-    "@abgov/angular-components": "/Users/thytran142/WebstormProjects/ui-components/dist/libs/angular-components",
-    "@abgov/web-components": "/Users/thytran142/WebstormProjects/ui-components/dist/libs/web-components",
+    "@abgov/angular-components": "latest",
+    "@abgov/web-components": "latest",
     "@angular/animations": "^18.0.0",
     "@angular/common": "^18.0.0",
     "@angular/compiler": "^18.0.0",
