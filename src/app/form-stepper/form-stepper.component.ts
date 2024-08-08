@@ -18,8 +18,9 @@ import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 export class FormStepperComponent {
   step = -1;
   // controlled by the user based on form completion
-  status = ["complete", "complete", "incomplete", "incomplete"];
+  status = ["incomplete", "incomplete", "incomplete", "incomplete"];
   updateStep(event: Event) {
+    console.log("updateStep is called", event);
     this.step = (event as CustomEvent).detail.step;
   }
   setPage(page: number) {
