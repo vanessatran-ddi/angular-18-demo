@@ -1,4 +1,4 @@
-import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
 // import { GoABContainer, GoABDatePicker, GoABDropdown, GoABDropdownItem, GoABFormItem, GoABInput, GoABSpacer } from "@abgov/angular-components";
 // import { GoABDatePickerOnChangeDetail, GoABDropdownOnChangeDetail } from "@abgov/ui-components-common";
 import { CommonModule } from "@angular/common";
@@ -23,7 +23,7 @@ import {Countries, CountrySubdivisions} from "./countries.data";
   styleUrl: './dropdown.component.css',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class DropdownComponent {
+export class DropdownComponent implements OnInit {
   colors: string[] = [];
   selectedColor = "red";
   boundVal = "";
@@ -99,12 +99,12 @@ export class DropdownComponent {
     console.log("select change dynamic color ", event.detail.value, event);
   }
   ngOnInit() {
-
-    setTimeout(() => this.colors = ["red", "green", "blue"], 1);
-
+    // this.colors = ["red", "green", "blue"]
+   setTimeout(() => this.colors = ["red", "green", "blue"], 1);
+    console.log("this.colors ", this.colors);
     // listen to fg changes
-    this.fg.valueChanges.subscribe(value => {
-      console.log('Form value changed:', value);
-    });
+    // this.fg.valueChanges.subscribe(value => {
+    //   console.log('Form value changed:', value);
+    // });
   }
 }
