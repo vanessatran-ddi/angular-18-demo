@@ -3,7 +3,6 @@ import {
   GoABButton,
   GoABButtonGroup,
   GoABHeroBanner,
-  GoABHeroBannerActions
 } from "@abgov/angular-components";
 
 @Component({
@@ -11,7 +10,6 @@ import {
   standalone: true,
   imports: [
     GoABHeroBanner,
-    GoABHeroBannerActions,
     GoABButton,
     GoABButtonGroup,
   ],

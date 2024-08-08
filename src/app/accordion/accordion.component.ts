@@ -1,4 +1,4 @@
-import {GoABAccordion, GoABButton, GoABBadge, GoABAccordionHeadingContent} from '@abgov/angular-components';
+import {GoABAccordion, GoABButton, GoABBadge} from '@abgov/angular-components';
 import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from "@angular/core";
 import {AccordionModule} from "primeng/accordion";
 import {CardModule} from "primeng/card";
@@ -10,7 +10,7 @@ import {AutoCompleteModule} from "primeng/autocomplete";
 @Component({
   selector: 'app-accordion',
   standalone: true,
-  imports: [GoABAccordion, GoABButton, GoABBadge, AccordionModule, CardModule, MatFormField, GoABAccordionHeadingContent, MatAccordion, MatActionList, AutoCompleteModule],
+  imports: [GoABAccordion, GoABButton, GoABBadge, AccordionModule, CardModule, MatFormField, MatAccordion, MatActionList, AutoCompleteModule],
   templateUrl: './accordion.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
