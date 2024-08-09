@@ -86,9 +86,9 @@ export class DropdownComponent implements OnInit {
     });
   }
 
-  selectColor(event: any) {
+  selectColor(event: Event) {
     console.log("Select Color", event);
-    this.selectedColor = event.detail.value;
+    this.selectedColor = (event as CustomEvent).detail.value;
   }
 
   selectProvince(event: any) {
