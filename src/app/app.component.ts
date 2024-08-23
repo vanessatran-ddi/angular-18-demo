@@ -122,12 +122,13 @@
 
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { RouterLink, RouterOutlet } from "@angular/router";
+import {FormStepperComponent} from "../app/form-stepper/form-stepper.component";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   standalone: true,
-  imports: [RouterOutlet, RouterLink],
+  imports: [RouterOutlet, RouterLink, FormStepperComponent, FormStepperComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class AppComponent {}
