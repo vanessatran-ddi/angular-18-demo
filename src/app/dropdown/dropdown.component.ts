@@ -5,6 +5,12 @@ import { CommonModule } from "@angular/common";
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Countries, CountrySubdivisions} from "./countries.data";
 
+type Task = {
+  value: string;
+  label: string;
+  mount: string;
+};
+
 @Component({
   selector: 'app-dropdown',
   standalone: true,
@@ -106,5 +112,35 @@ export class DropdownComponent implements OnInit {
     // this.fg.valueChanges.subscribe(value => {
     //   console.log('Form value changed:', value);
     // });
+  }
+
+
+  // For mount
+
+  tasks: Task[] = [
+    { label: "Finish Report", value: "finish-report", mount: "append" },
+    { label: "Attend Meeting", value: "attend-meeting", mount: "append" },
+    { label: "Reply Emails", value: "reply-emails", mount: "append" }
+  ];
+  newTask = "";
+  mountType = "append";
+  selectedTask = "";
+
+  onMountTypeChange(event: Event) {
+    this.mountType = (event as CustomEvent).detail.value;
+  }
+  onNewTaskChange(event: Event) {
+    this.newTask = (event as CustomEvent).detail.value;
+  }
+  onSelectedTaskChange(event: Event) {
+    this.selectedTask = (event as CustomEvent).detail.value;
+  }
+  addTask() {
+    const task: Task = {
+      label: this.newTask,
+      value: this.newTask.toLowerCase().replace(' ', '-'),
+      mount: this.mountType
+    };
+    this.tasks.push(task);
   }
 }

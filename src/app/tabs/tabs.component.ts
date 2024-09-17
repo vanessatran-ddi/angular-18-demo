@@ -24,6 +24,12 @@ export class TabsComponent implements OnInit {
     this.text = "";
   }
 
+  onChange(event: Event) {
+    const customEvent = event as CustomEvent;
+    const tabIndex = customEvent.detail.tab;
+    console.log('Tab changed to ', tabIndex);
+  }
+
   public ngOnInit() {
     setTimeout(() => this.text = "Dynamic content here", 3000);
   }

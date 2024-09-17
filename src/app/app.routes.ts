@@ -37,6 +37,7 @@ import {ThreeColumnLayoutComponent} from "./three-column-layout/three-column-lay
 import {TooltipComponent} from "./tooltip/tooltip.component";
 import {TwoColumnLayoutComponent} from "./two-column-layout/two-column-layout.component";
 import {DatePickerComponent} from "./date-picker/date-picker.component";
+import { SomeComponent } from "./some-component/some-component.component";
 
 
 export const routes: Routes = [
@@ -191,5 +192,9 @@ export const routes: Routes = [
   {
     path: "date-picker",
     component: DatePickerComponent
+  },
+  {
+    path: "some-component",
+    component: SomeComponent
   }
 ];

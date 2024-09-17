@@ -1,0 +1,30 @@
+<goa-form-item mt="m" label="New task"
+               requirement="required"
+               [error]="taskErrorMessage"
+               helpText="If you couldn't find a task you want to work today, you can add a new task.">
+  <goa-input name="task" placeholder="Ex: Schedule a meeting"
+             [value]="newTask"
+             (_change)="onNewTaskChange($event)"/>
+</goa-form-item>
+<goa-form-item mt="m" label="Order">
+  <goa-dropdown name="mountType" [value]="mountType"
+                (_change)="onMountTypeChange($event)">
+    <goa-dropdown-item value="append" label="Add to the end of the list"></goa-dropdown-item>
+    <goa-dropdown-item value="prepend" label="Add to the beginning of the list"></goa-dropdown-item>
+    <goa-dropdown-item value="reset" label="Remove other tasks (reset)"></goa-dropdown-item>
+  </goa-dropdown>
+</goa-form-item>
+
+<goa-button mt="m" type="primary" (_click)="addTask()">Add task</goa-button>
+<goa-divider mt="m"></goa-divider>
+
+<goa-form-item mt="m" label="Select a task to work today">
+  <goa-dropdown  [value]="selectedTask" name="selectedTask"
+                 (_change)="onSelectedTaskChange($event)">
+    <goa-dropdown-item *ngFor="let task of tasks"
+                       [value]="task.value"
+                       [mount]="task.mount"
+                       [label]="task.label">
+    </goa-dropdown-item>
+  </goa-dropdown>
+</goa-form-item>
