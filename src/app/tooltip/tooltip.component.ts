@@ -1,12 +1,12 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {GoABIcon, GoABTooltip} from "@abgov/angular-components";
+import {GoabIcon, GoabTooltip} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-tooltip',
   standalone: true,
   imports: [
-    GoABTooltip,
-    GoABIcon,
+    GoabTooltip,
+    GoabIcon,
   ],
   templateUrl: './tooltip.component.html',
   styleUrl: './tooltip.component.css',

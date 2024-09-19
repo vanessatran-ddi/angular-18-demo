@@ -1,10 +1,10 @@
 <h2>Accordion</h2>
 
-<goa-accordion heading="Dynamic content" headingSize="medium">
+<goab-accordion heading="Dynamic content" headingSize="medium">
   {{content}}
   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna
   aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
-</goa-accordion>
+</goab-accordion>
 
 <goab-accordion heading="This is the title">
   <p>
@@ -15,7 +15,7 @@
     pariatur quibusdam magni eum vitae similique, laboriosam reiciendis repellat sapiente.
     Nobis laudantium facilis incidunt!
   </p>
-  <goab-button (_click)="onClick()" size="compact" type="primary">Link to application</goab-button>
+  <goab-button (click)="onClick()" size="compact" type="primary">Link to application</goab-button>
 </goab-accordion>
 
 <goab-accordion heading="This is the title" secondaryText="Secondary text">
@@ -29,7 +29,7 @@
   </p>
 </goab-accordion>
 
-<goab-button type="tertiary" mb="xl" (_click)="onClick()">
+<goab-button type="tertiary" mb="xl" (click)="onClick()">
   Toggle Accordion Group
 </goab-button>
 
@@ -42,15 +42,4 @@
   test
 </goab-accordion>
 <goab-accordion heading="Heading" [open]="open"> Content 3 </goab-accordion>
-
-<mat-accordion>
-<mat-action-list>
-
-</mat-action-list>
-</mat-accordion>
-
-
-<p-card>
-
-</p-card>
 
