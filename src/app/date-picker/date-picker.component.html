@@ -1,3 +1,5 @@
 <goa-form-item label="Item">
-  <goa-date-picker (_change)="onChange($event)" name="item" value="Fri Apr 26 2024 10:43:28 GMT-0400 (Eastern Daylight Time)"></goa-date-picker>
+  <goa-date-picker (_change)="onChange($event)" name="item" [value]="value"></goa-date-picker>
 </goa-form-item>
+
+<goa-button (_click)="reset()">Reset</goa-button>
