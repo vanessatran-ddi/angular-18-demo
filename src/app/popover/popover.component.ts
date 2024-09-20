@@ -1,20 +1,20 @@
 import { Component } from '@angular/core';
 import {
-  GoABBlock,
-  GoABButton,
-  GoABButtonGroup,
-  GoABPopover,
-  GoABSpacer
+  GoabBlock,
+  GoabButton,
+  GoabButtonGroup,
+  GoabPopover,
+  GoabSpacer
 } from "@abgov/angular-components";
 
 @Component({
   selector: 'app-popover',
   standalone: true,
-  imports: [GoABPopover,
-    GoABButton,
-    GoABButtonGroup,
-    GoABBlock,
-    GoABSpacer,],
+  imports: [GoabPopover,
+    GoabButton,
+    GoabButtonGroup,
+    GoabBlock,
+    GoabSpacer,],
   templateUrl: './popover.component.html',
   styleUrl: './popover.component.css'
 })

@@ -1,12 +1,12 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {GoABAppHeader, GoABAppHeaderMenu} from "@abgov/angular-components";
+import {GoabAppHeader, GoabAppHeaderMenu} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-header',
   standalone: true,
   imports: [
-    GoABAppHeader,
-    GoABAppHeaderMenu
+    GoabAppHeader,
+    GoabAppHeaderMenu
   ],
   templateUrl: './header.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

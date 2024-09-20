@@ -1,6 +1,6 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import { GoABContainer, GoABDatePicker, GoABDropdown, GoABDropdownItem, GoABFormItem, GoABInput, GoABSpacer } from "@abgov/angular-components";
-import { GoABDatePickerOnChangeDetail, GoABDropdownOnChangeDetail } from "@abgov/ui-components-common";
+import { GoabContainer, GoabDatePicker, GoabDropdown, GoabDropdownItem, GoabFormItem, GoabInput, GoabSpacer } from "@abgov/angular-components";
+import { GoabDatePickerOnChangeDetail, GoabDropdownOnChangeDetail } from "@abgov/ui-components-common";
 import { CommonModule } from "@angular/common";
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Countries, CountrySubdivisions} from "./countries.data";
@@ -9,13 +9,13 @@ import {Countries, CountrySubdivisions} from "./countries.data";
   selector: 'app-dropdown',
   standalone: true,
   imports: [
-    GoABDropdown,
-    GoABDropdownItem,
-    GoABFormItem,
-    GoABContainer,
-    GoABDatePicker,
-    GoABInput,
-    GoABSpacer,
+    GoabDropdown,
+    GoabDropdownItem,
+    GoabFormItem,
+    GoabContainer,
+    GoabDatePicker,
+    GoabInput,
+    GoabSpacer,
     ReactiveFormsModule,
     CommonModule,
   ],
@@ -36,7 +36,7 @@ export class DropdownComponent {
   });
 
   item = new Date();
-  onChange(e: GoABDatePickerOnChangeDetail) {
+  onChange(e: GoabDatePickerOnChangeDetail) {
     // handle change
     console.log(e);
   }
@@ -112,7 +112,7 @@ export class DropdownComponent {
     });
   }
 
-  selectColor(event: GoABDropdownOnChangeDetail) {
+  selectColor(event: GoabDropdownOnChangeDetail) {
     console.log("Select Color", event);
     this.selectedColor = event.value || "";
   }
@@ -151,7 +151,7 @@ export class DropdownComponent {
     }
   ];
 
-  onChangeDropdown(e: GoABDropdownOnChangeDetail) {
+  onChangeDropdown(e: GoabDropdownOnChangeDetail) {
     console.log(e)
   }
 }

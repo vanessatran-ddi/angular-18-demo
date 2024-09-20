@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {GoABBlock, GoABIcon, GoABTable, GoABTableSortHeader} from "@abgov/angular-components";
-import {GoABTableOnSortDetail} from "@abgov/ui-components-common";
+import {GoabBlock, GoabIcon, GoabTable, GoabTableSortHeader} from "@abgov/angular-components";
+import {GoabTableOnSortDetail} from "@abgov/ui-components-common";
 import {faker} from "@faker-js/faker";
 interface User {
   id: string;
@@ -12,10 +12,10 @@ interface User {
   selector: 'app-table',
   standalone: true,
   imports: [
-    GoABBlock,
-    GoABTable,
-    GoABTableSortHeader,
-    GoABIcon,
+    GoabBlock,
+    GoabTable,
+    GoabTableSortHeader,
+    GoabIcon,
   ],
   templateUrl: './table.component.html',
   styleUrl: './table.component.css'
@@ -34,7 +34,7 @@ export class TableComponent {
     }
   }
 
-  handleSort(event: GoABTableOnSortDetail) {
+  handleSort(event: GoabTableOnSortDetail) {
     const { sortBy, sortDir } = event;
     this.users.sort(
       (a: any, b: any) => (a[sortBy] > b[sortBy] ? -1 : 1) * sortDir

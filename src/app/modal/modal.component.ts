@@ -1,23 +1,23 @@
 import { Component } from '@angular/core';
 import {
-  GoABButton,
-  GoABButtonGroup, GoABDropdown, GoABDropdownItem,
-  GoABFormItem,
-  GoABInput,
-  GoABModal
+  GoabButton,
+  GoabButtonGroup, GoabDropdown, GoabDropdownItem,
+  GoabFormItem,
+  GoabInput,
+  GoabModal
 } from "@abgov/angular-components";
 import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [GoABModal,
-    GoABButton,
-    GoABButtonGroup,
-    GoABFormItem,
-    GoABInput,
-    GoABDropdown,
-    GoABDropdownItem,],
+  imports: [GoabModal,
+    GoabButton,
+    GoabButtonGroup,
+    GoabFormItem,
+    GoabInput,
+    GoabDropdown,
+    GoabDropdownItem,],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.css'
 })

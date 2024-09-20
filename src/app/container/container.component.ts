@@ -1,14 +1,14 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
-import {GoABBadge, GoABBlock, GoABButton, GoABContainer} from "@abgov/angular-components";
+import {GoabBadge, GoabBlock, GoabButton, GoabContainer} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-container',
   standalone: true,
   imports: [
-    GoABContainer,
-    GoABBlock,
-    GoABBadge,
-    GoABButton
+    GoabContainer,
+    GoabBlock,
+    GoabBadge,
+    GoabButton
   ],
   templateUrl: './container.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

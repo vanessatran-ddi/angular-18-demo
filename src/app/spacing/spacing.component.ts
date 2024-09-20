@@ -1,24 +1,24 @@
 import { Component } from '@angular/core';
 import {
-  GoABBadge,
-  GoABBlock,
-  GoABButton,
-  GoABIcon,
-  GoABInput,
-  GoABSpacer, GoABTextArea
+  GoabBadge,
+  GoabBlock,
+  GoabButton,
+  GoabIcon,
+  GoabInput,
+  GoabSpacer, GoabTextArea
 } from "@abgov/angular-components";
 
 @Component({
   selector: 'app-spacing',
   standalone: true,
   imports: [
-    GoABInput,
-    GoABButton,
-    GoABIcon,
-    GoABSpacer,
-    GoABBlock,
-    GoABTextArea,
-    GoABBadge,
+    GoabInput,
+    GoabButton,
+    GoabIcon,
+    GoabSpacer,
+    GoabBlock,
+    GoabTextArea,
+    GoabBadge,
   ],
   templateUrl: './spacing.component.html',
   styleUrl: './spacing.component.css'

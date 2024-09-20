@@ -1,15 +1,15 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {AngularComponentsModule, GoABCheckbox, GoABFormItem} from "@abgov/angular-components";
+import {AngularComponentsModule, GoabCheckbox, GoabFormItem} from "@abgov/angular-components";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
-import {GoABCheckboxOnChangeDetail} from "@abgov/ui-components-common";
+import {GoabCheckboxOnChangeDetail} from "@abgov/ui-components-common";
 
 @Component({
   selector: 'app-checkbox',
   standalone: true,
   imports: [
-    GoABCheckbox,
+    GoabCheckbox,
     ReactiveFormsModule,
-    GoABFormItem,
+    GoabFormItem,
     AngularComponentsModule
   ],
   templateUrl: './checkbox.component.html',
@@ -31,17 +31,17 @@ export class CheckboxComponent {
   constructor() {
   }
 
-  onChange(e: GoABCheckboxOnChangeDetail) {
+  onChange(e: GoabCheckboxOnChangeDetail) {
     console.log(e)
     this.checkbox1Checked = !this.checkbox1Checked;
   }
 
-  onChange2(e: GoABCheckboxOnChangeDetail) {
+  onChange2(e: GoabCheckboxOnChangeDetail) {
     console.log(e)
     this.checkbox2Checked = !this.checkbox2Checked;
   }
 
-  onChange3(e: GoABCheckboxOnChangeDetail) {
+  onChange3(e: GoabCheckboxOnChangeDetail) {
     console.log(e)
     this.checkbox3Checked = !this.checkbox3Checked;
   }

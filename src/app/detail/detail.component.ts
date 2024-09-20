@@ -1,12 +1,12 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import { GoABButton, GoABDetails } from "@abgov/angular-components";
+import { GoabButton, GoabDetails } from "@abgov/angular-components";
 
 @Component({
   selector: 'app-detail',
   standalone: true,
   imports: [
-    GoABDetails,
-    GoABButton,
+    GoabDetails,
+    GoabButton,
   ],
   templateUrl: './detail.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

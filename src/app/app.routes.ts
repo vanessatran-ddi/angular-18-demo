@@ -36,6 +36,7 @@ import {TextAreaComponent} from "./text-area/text-area.component";
 import {ThreeColumnLayoutComponent} from "./three-column-layout/three-column-layout.component";
 import {TooltipComponent} from "./tooltip/tooltip.component";
 import {TwoColumnLayoutComponent} from "./two-column-layout/two-column-layout.component";
+import {DatePickerComponent} from "./date-picker/date-picker.component";
 
 
 export const routes: Routes = [
@@ -82,6 +83,10 @@ export const routes: Routes = [
   {
     path: "container",
     component: ContainerComponent
+  },
+  {
+    path: "date-picker",
+    component: DatePickerComponent,
   },
   {
     path: "detail",

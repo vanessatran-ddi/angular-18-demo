@@ -1,11 +1,11 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {GoABChip} from "@abgov/angular-components";
+import {GoabChip} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-chip',
   standalone: true,
   imports: [
-    GoABChip
+    GoabChip
   ],
   templateUrl: './chip.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

@@ -1,11 +1,11 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {GoABDivider} from "@abgov/angular-components";
+import {GoabDivider} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-divider',
   standalone: true,
   imports: [
-    GoABDivider,
+    GoabDivider,
   ],
   templateUrl: './divider.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

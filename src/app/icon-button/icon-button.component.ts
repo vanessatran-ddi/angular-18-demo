@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {GoABIconButton} from "@abgov/angular-components";
+import {GoabIconButton} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-icon-button',
   standalone: true,
-  imports: [ GoABIconButton,],
+  imports: [ GoabIconButton,],
   templateUrl: './icon-button.component.html',
   styleUrl: './icon-button.component.css'
 })

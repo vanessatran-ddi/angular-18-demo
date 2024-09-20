@@ -1,0 +1,19 @@
+<h1>Date Picker</h1>
+<h3>Issue 2044</h3>
+<goab-button-group alignment="center" mb="xl">
+  <goab-button (onClick)="enableDatePicker()">Enable</goab-button>
+  <goab-button (onClick)="disableDatePicker()">Disable</goab-button>
+</goab-button-group>
+
+<h4>Form control:</h4>
+<goab-date-picker [formControl]="dateControl"></goab-date-picker>
+
+<h4>Event:</h4>
+<goab-date-picker [formControl]="dateControl" [attr.disabled]="disabled"></goab-date-picker>
+
+<goab-divider mt="l"></goab-divider>
+
+<h3>Issue 2056</h3>
+
+<goab-button (onClick)="resetDatePicker()">Reset</goab-button>
+<goab-date-picker [value]="value"></goab-date-picker>

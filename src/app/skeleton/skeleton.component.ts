@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {GoABSkeleton} from "@abgov/angular-components";
+import {GoabSkeleton} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-skeleton',
   standalone: true,
-  imports: [ GoABSkeleton,],
+  imports: [ GoabSkeleton,],
   templateUrl: './skeleton.component.html',
   styleUrl: './skeleton.component.css'
 })

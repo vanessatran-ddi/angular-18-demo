@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {GoABPagination, GoABTable} from "@abgov/angular-components";
-import {GoABPaginationOnChangeDetail} from "@abgov/ui-components-common";
+import {GoabPagination, GoabTable} from "@abgov/angular-components";
+import {GoabPaginationOnChangeDetail} from "@abgov/ui-components-common";
 import { faker } from "@faker-js/faker";
 interface User {
   id: string;
@@ -12,8 +12,8 @@ interface User {
 @Component({
   selector: 'app-paginate',
   standalone: true,
-  imports: [GoABPagination,
-    GoABTable,],
+  imports: [GoabPagination,
+    GoabTable,],
   templateUrl: './paginate.component.html',
   styleUrl: './paginate.component.css'
 })
@@ -22,7 +22,7 @@ export class PaginateComponent {
   pageUsers: User[] = [];
   page = 1;
 
-  handlePageChange(e: GoABPaginationOnChangeDetail) {
+  handlePageChange(e: GoabPaginationOnChangeDetail) {
     this.page = e.page;
 
     const offset = (this.page - 1) * 10;

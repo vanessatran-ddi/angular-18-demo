@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
-import {GoABIcon} from "@abgov/angular-components";
+import {GoabIcon} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-icon',
   standalone: true,
   imports: [
-    GoABIcon
+    GoabIcon
   ],
   templateUrl: './icon.component.html',
   styleUrl: './icon.component.css'

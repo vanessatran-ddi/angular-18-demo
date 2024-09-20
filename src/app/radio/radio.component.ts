@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
-import {GoABRadioGroupOnChangeDetail} from "@abgov/ui-components-common";
-import {GoABFormItem, GoABRadioGroup, GoABRadioItem} from "@abgov/angular-components";
+import {GoabRadioGroupOnChangeDetail} from "@abgov/ui-components-common";
+import {GoabFormItem, GoabRadioGroup, GoabRadioItem} from "@abgov/angular-components";
 import {FormControl, ReactiveFormsModule} from "@angular/forms";
 
 @Component({
   selector: 'app-radio',
   standalone: true,
-  imports: [ GoABRadioGroup,
-    GoABRadioItem,
-    GoABFormItem,
+  imports: [ GoabRadioGroup,
+    GoabRadioItem,
+    GoabFormItem,
     ReactiveFormsModule,],
   templateUrl: './radio.component.html',
   styleUrl: './radio.component.css'
@@ -38,7 +38,7 @@ export class RadioComponent {
     },
   ];
 
-  onChange(e: GoABRadioGroupOnChangeDetail) {
+  onChange(e: GoabRadioGroupOnChangeDetail) {
     console.log("onChange", e.name, e.value);
     this.radioValue = e.value;
   }

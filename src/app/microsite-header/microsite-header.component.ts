@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {GoABMicrositeHeader} from "@abgov/angular-components";
+import {GoabMicrositeHeader} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-microsite-header',
   standalone: true,
-  imports: [GoABMicrositeHeader,],
+  imports: [GoabMicrositeHeader,],
   templateUrl: './microsite-header.component.html',
   styleUrl: './microsite-header.component.css'
 })

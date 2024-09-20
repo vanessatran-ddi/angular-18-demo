@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import {
-  GoABButton,
-  GoABButtonGroup,
-  GoABHeroBanner,
+  GoabButton,
+  GoabButtonGroup,
+  GoabHeroBanner,
 } from "@abgov/angular-components";
 
 @Component({
   selector: 'app-hero-banner',
   standalone: true,
   imports: [
-    GoABHeroBanner,
-    GoABButton,
-    GoABButtonGroup,
+    GoabHeroBanner,
+    GoabButton,
+    GoabButtonGroup,
   ],
   templateUrl: './hero-banner.component.html',
   styleUrl: './hero-banner.component.css'

@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
-import {GoABBadge, GoABDatePicker, GoABFormItem, GoABInput} from "@abgov/angular-components";
+import {GoabBadge, GoabDatePicker, GoabFormItem, GoabInput} from "@abgov/angular-components";
 import {JsonPipe} from "@angular/common";
 import { format, parseISO } from "date-fns";
 interface User {
@@ -12,10 +12,10 @@ interface User {
   selector: 'app-input',
   standalone: true,
   imports: [
-    GoABInput,
-    GoABDatePicker,
-    GoABBadge,
-    GoABFormItem,
+    GoabInput,
+    GoabDatePicker,
+    GoabBadge,
+    GoabFormItem,
     JsonPipe,
     ReactiveFormsModule,
   ],

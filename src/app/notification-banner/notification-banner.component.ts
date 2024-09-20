@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import {GoABNotificationBanner} from "@abgov/angular-components";
+import {GoabNotificationBanner} from "@abgov/angular-components";
 
 @Component({
   selector: 'app-notification-banner',
   standalone: true,
-  imports: [GoABNotificationBanner,],
+  imports: [GoabNotificationBanner,],
   templateUrl: './notification-banner.component.html',
   styleUrl: './notification-banner.component.css'
 })

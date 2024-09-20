@@ -1,10 +1,10 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {
-  GoABBlock,
-  GoABButton,
-  GoABDropdown, GoABDropdownItem,
-  GoABFormItem,
-  GoABInput
+  GoabBlock,
+  GoabButton,
+  GoabDropdown, GoabDropdownItem,
+  GoabFormItem,
+  GoabInput
 } from "@abgov/angular-components";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
 
@@ -12,12 +12,12 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
   selector: 'app-form-item',
   standalone: true,
   imports: [
-    GoABInput,
-    GoABFormItem,
-    GoABBlock,
-    GoABButton,
-    GoABDropdown,
-    GoABDropdownItem,
+    GoabInput,
+    GoabFormItem,
+    GoabBlock,
+    GoabButton,
+    GoabDropdown,
+    GoabDropdownItem,
     ReactiveFormsModule,
   ],
   templateUrl: './form-item.component.html',
