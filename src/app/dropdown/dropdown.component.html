@@ -7,23 +7,22 @@
 <!--  Update to red-->
 <!--</goa-button>-->
 <br/>
-<div [style]="{
-    width: '80%',
-    'border': '2px solid #cacaca',
-  }"
->
-  <goa-form-item label="Dropdown with append">
-    <goa-dropdown width="100%" >
-      @for (color of colors; track color) {
-        <goa-dropdown-item
-          [value]="color"
-          [label]="color"
-        ></goa-dropdown-item>
-      }
 
-    </goa-dropdown>
-  </goa-form-item>
-</div>
+<!--  <goa-form-item label="Dropdown with append">-->
+<!--&lt;!&ndash;    <goa-dropdown width="80%" >&ndash;&gt;-->
+<!--&lt;!&ndash;      @for (color of colors; track color) {&ndash;&gt;-->
+<!--&lt;!&ndash;        <goa-dropdown-item<div [style]="{&ndash;&gt;-->
+<!--&lt;!&ndash;    width: '80%',&ndash;&gt;-->
+<!--&lt;!&ndash;    'border': '2px solid #cacaca',&ndash;&gt;-->
+<!--&lt;!&ndash;  }"&ndash;&gt;-->
+<!--&lt;!&ndash;        >&ndash;&gt;-->
+<!--&lt;!&ndash;          [value]="color"&ndash;&gt;-->
+<!--&lt;!&ndash;          [label]="color"&ndash;&gt;-->
+<!--&lt;!&ndash;        ></goa-dropdown-item>&ndash;&gt;-->
+<!--&lt;!&ndash;      }&ndash;&gt;-->
+<!--    </goa-dropdown>-->
+<!--  </goa-form-item>-->
+<!--</div>-->
 <!--  <goa-form-item label="Dropdown">-->
 <!--    <goa-dropdown width="50%" goaValue name="colors123" [formControl]="reactiveFormCtrl">-->
 <!--      @for(color of colors; track color) {-->
@@ -236,34 +235,34 @@
 <!--</form>-->
 
 
-<goa-form-item mt="m" label="New task" requirement="required"
-               helpText="If you couldn't find a task you want to work today, you can add a new task.">
-  <goa-input name="task" placeholder="Ex: Schedule a meeting"
-             [value]="newTask"
-             (_change)="onNewTaskChange($event)"
-  />
-</goa-form-item>
+<!--<goa-form-item mt="m" label="New task" requirement="required"-->
+<!--               helpText="If you couldn't find a task you want to work today, you can add a new task.">-->
+<!--  <goa-input name="task" placeholder="Ex: Schedule a meeting"-->
+<!--             [value]="newTask"-->
+<!--             (_change)="onNewTaskChange($event)"-->
+<!--  />-->
+<!--</goa-form-item>-->
 
-<goa-form-item mt="m" label="Order">
-  <goa-dropdown name="mountType" [value]="mountType"
-                (_change)="onMountTypeChange($event)">
-    <goa-dropdown-item value="append" label="Add to the end of the list"></goa-dropdown-item>
-    <goa-dropdown-item value="prepend" label="Add to the beginning of the list"></goa-dropdown-item>
-    <goa-dropdown-item value="reset" label="Remove other tasks (reset)"></goa-dropdown-item>
-  </goa-dropdown>
-</goa-form-item>
+<!--<goa-form-item mt="m" label="Order">-->
+<!--  <goa-dropdown name="mountType" [value]="mountType"-->
+<!--                (_change)="onMountTypeChange($event)">-->
+<!--    <goa-dropdown-item value="append" label="Add to the end of the list"></goa-dropdown-item>-->
+<!--    <goa-dropdown-item value="prepend" label="Add to the beginning of the list"></goa-dropdown-item>-->
+<!--    <goa-dropdown-item value="reset" label="Remove other tasks (reset)"></goa-dropdown-item>-->
+<!--  </goa-dropdown>-->
+<!--</goa-form-item>-->
 
-<goa-button mt="m" type="primary" (_click)="addTask()">Add task</goa-button>
+<!--<goa-button mt="m" type="primary" (_click)="addTask()">Add task</goa-button>-->
 
-<goa-divider mt="m"></goa-divider>
+<!--<goa-divider mt="m"></goa-divider>-->
 
-<goa-form-item mt="m" label="Select a task to work today">
-  <goa-dropdown  [value]="selectedTask" name="selectedTask"
-                 (_change)="onSelectedTaskChange($event)">
-    <goa-dropdown-item *ngFor="let task of tasks"
-                       [value]="task.value"
-                       [mount]="task.mount"
-                       [label]="task.label">
-    </goa-dropdown-item>
-  </goa-dropdown>
-</goa-form-item>
+<!--<goa-form-item mt="m" label="Select a task to work today">-->
+<!--  <goa-dropdown  [value]="selectedTask" name="selectedTask"-->
+<!--                 (_change)="onSelectedTaskChange($event)">-->
+<!--    <goa-dropdown-item *ngFor="let task of tasks"-->
+<!--                       [value]="task.value"-->
+<!--                       [mount]="task.mount"-->
+<!--                       [label]="task.label">-->
+<!--    </goa-dropdown-item>-->
+<!--  </goa-dropdown>-->
+<!--</goa-form-item>-->

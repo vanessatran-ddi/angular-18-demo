@@ -13,32 +13,12 @@ import {FormControl, ReactiveFormsModule} from "@angular/forms";
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class CheckboxComponent {
-  checkbox1Checked = false;
-  checkbox2Checked = true;
-  checkbox3Checked = false;
-  reactiveFormCtrl = new FormControl();
-  testFormCtrl = new FormControl();
-  // testFormCtrl = new FormControl({
-  //   value: null,
-  //   disabled: true
-  // });
-  test1FormCtrl = new FormControl();
-  bindingVal = "";
-  bindingNoVal = "";
-
-  constructor() {
-    // this.testFormCtrl.disable();
-  }
-
-  onChange() {
-    this.checkbox1Checked = !this.checkbox1Checked;
-  }
-
-  onChange2() {
-    this.checkbox2Checked = !this.checkbox2Checked;
-  }
-
-  onChange3() {
-    this.checkbox3Checked = !this.checkbox3Checked;
+  checked = false;
+  itemFormCtrl = new FormControl();
+  onChange(event: Event) {
+    const {name, checked, value} = (event as CustomEvent).detail;
+    console.log("CheckboxComponent.onChange", {name, checked, value});
+    this.checked = !this.checked;
+    // or this.checked = !this.checked;
   }
 }

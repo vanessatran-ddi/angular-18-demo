@@ -1,5 +1,7 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { CommonModule } from "@angular/common";
+import {emailValidator, SINValidator } from "@abgov/angular-components";
+import {FormControl} from "@angular/forms";
 
 type Task = {
   value: string;
@@ -25,6 +27,10 @@ export class SomeComponent {
   mountType = "append";
   selectedTask = "";
   taskErrorMessage = "";
+  isDisabled = false;
+
+  taskFormControl = new FormControl("test");
+
 
   onMountTypeChange(event: Event) {
     this.mountType = (event as CustomEvent).detail.value;
@@ -32,6 +38,10 @@ export class SomeComponent {
 
   onNewTaskChange(event: Event) {
     this.newTask = (event as CustomEvent).detail.value;
+    const validate = SINValidator();
+    console.log("SINValidator", validate(this.newTask));
+    const emailValidate = emailValidator();
+    console.log("emailValidator", emailValidate(this.newTask));
   }
 
   onSelectedTaskChange(event: Event) {
@@ -50,5 +60,9 @@ export class SomeComponent {
       mount: this.mountType
     };
     this.tasks.push(task);
+  }
+
+  disableOrEnable() {
+    this.isDisabled = !this.isDisabled;
   }
 }

@@ -1,4 +1,5 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
+import {FormControl} from "@angular/forms";
 
 @Component({
   selector: 'app-date-picker',
@@ -10,6 +11,7 @@ import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 })
 export class DatePickerComponent {
   value = "Fri Apr 26 2024 10:43:28 GMT-0400 (Eastern Daylight Time)";
+  dateCtrl = new FormControl();
   onChange(event: Event) {
     // handle change
     console.log((event as CustomEvent).detail.value);
@@ -17,5 +19,6 @@ export class DatePickerComponent {
   }
   reset() {
     this.value = "";
+    this.dateCtrl.reset();
   }
 }
