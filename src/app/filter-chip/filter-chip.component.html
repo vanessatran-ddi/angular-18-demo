@@ -1,0 +1,32 @@
+<h1>Filter Chip</h1>
+
+<h2>Delete event</h2>
+<goa-filter-chip
+  *ngFor="let chip of chips"
+  [content]="chip"
+  (_click)="deleteChip(chip)"
+  mr="s"
+></goa-filter-chip>
+
+<h2>Error state</h2>
+<goa-filter-chip content="Filter Chip Text" error="true"  mr="s"></goa-filter-chip>
+<goa-filter-chip
+  content="Filter Chip Text"
+  error="true"
+  (_click)="onClick()"
+></goa-filter-chip>
+
+
+<h2>Unfilled Close Icon (Default)</h2>
+<goa-filter-chip content="This is a really long chip content that wraps when the text gets too long"></goa-filter-chip>
+
+<h2>Filled Close Icon (On Hover)</h2>
+<p>Hover over the chip to see the close icon change:</p>
+<goa-filter-chip content="Hover Me"></goa-filter-chip>
+
+<h2>Multiple Filter Chips</h2>
+<div>
+  <goa-filter-chip content="Category 1" (_click)="onFilterRemove('Category 1')"  mr="s"></goa-filter-chip>
+  <goa-filter-chip content="Category 2" (_click)="onFilterRemove('Category 2')"  mr="s"></goa-filter-chip>
+  <goa-filter-chip content="Category 3" (_click)="onFilterRemove('Category 3')"></goa-filter-chip>
+</div>

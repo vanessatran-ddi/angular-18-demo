@@ -2,7 +2,7 @@ import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {JsonPipe} from "@angular/common";
 // import {GoABFormItem, GoABInput, GoABTextArea} from "@abgov/angular-components";
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
-import { SINValidator } from '@abgov/angular-components';
+// import { SINValidator } from '@abgov/angular-components';
 // import {GoABTextAreaOnChangeDetail, GoABTextAreaOnKeyPressDetail} from "@abgov/ui-components-common";
 
 @Component({
@@ -31,8 +31,8 @@ export class TextAreaComponent {
 
   onChange(e: any) {
     console.log("changed", e.detail.name, e.detail.value);
-    const validate = SINValidator();
-    console.log("SINValidator", validate(e.detail.value));
+    // const validate = SINValidator();
+    // console.log("SINValidator", validate(e.detail.value));
   }
 
   onKeyPress(e: any) {

@@ -31,3 +31,28 @@
 <!--<goa-accordion heading="Heading" [open]="open">-->
 <!--  Content 3-->
 <!--</goa-accordion>-->
+
+
+<h3>Review your application</h3>
+<goa-accordion heading="Referral details" [attr.open]="isReferralOpen" (_change)="updateReferralAccordion($event)">
+  <goa-badge type="important" content="Updated" slot="headingcontent"/>
+  <dl class="accordion-example">
+    <dt>Date of referral</dt>
+    <dd>January 27, 2021</dd>
+    <dt>Work safety concerns</dt>
+    <dd>None</dd>
+    <dt>Type of referral</dt>
+    <dd>Word of mouth, internet search</dd>
+    <dt>Intake received from another site</dt>
+    <dd>Yes</dd>
+  </dl>
+</goa-accordion>
+
+<goa-accordion heading="Contact information" [open]="isContactInfoOpen" (_change)="updateContactInfoAccordion($event)">
+  <dl class="accordion-example">
+    <dt>Name</dt>
+    <dd>Joan Smith</dd>
+    <dt>Contact preference</dt>
+    <dd>Text message</dd>
+  </dl>
+</goa-accordion>

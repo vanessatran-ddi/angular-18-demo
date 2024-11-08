@@ -1,6 +1,6 @@
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import {emailValidator, SINValidator } from "@abgov/angular-components";
+// import {emailValidator, SINValidator } from "@abgov/angular-components";
 import {FormControl} from "@angular/forms";
 
 type Task = {
@@ -38,10 +38,10 @@ export class SomeComponent {
 
   onNewTaskChange(event: Event) {
     this.newTask = (event as CustomEvent).detail.value;
-    const validate = SINValidator();
-    console.log("SINValidator", validate(this.newTask));
-    const emailValidate = emailValidator();
-    console.log("emailValidator", emailValidate(this.newTask));
+    // const validate = SINValidator();
+    // console.log("SINValidator", validate(this.newTask));
+    // const emailValidate = emailValidator();
+    // console.log("emailValidator", emailValidate(this.newTask));
   }
 
   onSelectedTaskChange(event: Event) {

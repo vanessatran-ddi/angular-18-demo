@@ -38,6 +38,7 @@ import {TooltipComponent} from "./tooltip/tooltip.component";
 import {TwoColumnLayoutComponent} from "./two-column-layout/two-column-layout.component";
 import {DatePickerComponent} from "./date-picker/date-picker.component";
 import { SomeComponent } from "./some-component/some-component.component";
+import {FilterChipComponent} from "./filter-chip/filter-chip.component";
 
 
 export const routes: Routes = [
@@ -100,6 +101,10 @@ export const routes: Routes = [
   {
     path: "file-upload",
     component: FileUploadComponent
+  },
+  {
+    path: "filter-chip",
+    component: FilterChipComponent
   },
   {
     path: "form-item",
