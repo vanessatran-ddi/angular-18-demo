@@ -17,9 +17,14 @@ import {AutoCompleteModule} from "primeng/autocomplete";
 export class AccordionComponent implements OnInit{
   open = false;
   content = "";
+
+  accordionStatus = "Show all sections";
+
   onClick() {
     this.open = !this.open;
+    this.accordionStatus = (this.open) ? "Hide all sections" : "Show all sections";
   }
+
   ngOnInit() {
     setTimeout(() => {
       this.content = "Content loaded!";

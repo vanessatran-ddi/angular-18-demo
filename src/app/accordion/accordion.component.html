@@ -43,3 +43,56 @@
 </goab-accordion>
 <goab-accordion heading="Heading" [open]="open"> Content 3 </goab-accordion>
 
+<h1>DOCS</h1>
+
+<goab-accordion heading="Heading" headingSize="medium">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+</goab-accordion>
+
+
+<h3>Review your application</h3>
+<goab-accordion heading="Referral details" [headingContent]="importantBadge">
+  <ng-template #importantBadge>
+    <goab-badge type="important" content="Updated"></goab-badge>
+  </ng-template>
+  <dl class="accordion-example">
+    <dt>Date of referral</dt>
+    <dd>January 27, 2021</dd>
+    <dt>Work safety concerns</dt>
+    <dd>None</dd>
+    <dt>Type of referral</dt>
+    <dd>Word of mouth, internet search</dd>
+    <dt>Intake received from another site</dt>
+    <dd>Yes</dd>
+  </dl>
+</goab-accordion>
+
+<goab-accordion heading="Contact information">
+  <dl class="accordion-example">
+    <dt>Name</dt>
+    <dd>Joan Smith</dd>
+    <dt>Contact preference</dt>
+    <dd>Text message</dd>
+  </dl>
+</goab-accordion>
+
+
+<goab-button type="tertiary" mb="m" (onClick)="onClick()">
+  {{ accordionStatus }}
+</goab-button>
+
+<goab-accordion heading="How do I create an account?" headingSize="medium" [open]="open">
+  To create an account you will need to contact your office admin.
+</goab-accordion>
+
+<goab-accordion heading="What verification is needed to sign documents digitally?" headingSize="medium" [open]="open">
+  You will need to verify your identity through our two factor authentication in addition to the digital signature.
+</goab-accordion>
+
+<goab-accordion heading="Can I track the status of my service requests online?" headingSize="medium" [open]="open">
+  Yes, you can see the status of your application on the main service dashboard when you login. You will receive updates and notifications in your email as your request progresses.
+</goab-accordion>
+
+<goab-accordion heading="Can I track the status of my service requests online?" headingSize="medium" [open]="open">
+  Yes, our digital service is designed with accessibility in mind. <a href="#">More information on accessibility.</a>
+</goab-accordion>
