@@ -37,6 +37,7 @@ import {ThreeColumnLayoutComponent} from "./three-column-layout/three-column-lay
 import {TooltipComponent} from "./tooltip/tooltip.component";
 import {TwoColumnLayoutComponent} from "./two-column-layout/two-column-layout.component";
 import {DatePickerComponent} from "./date-picker/date-picker.component";
+import {BlockComponent} from "./block/block.component";
 
 
 export const routes: Routes = [
@@ -55,6 +56,10 @@ export const routes: Routes = [
   {
     path: "app-header",
     component: HeaderComponent
+  },
+  {
+    path: "block",
+    component: BlockComponent
   },
   {
     path: "button",

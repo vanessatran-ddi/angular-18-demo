@@ -1,6 +1,7 @@
 import {Component} from "@angular/core";
-import {GoabButton, GoabButtonGroup, GoabDatePicker, GoabDivider} from "@abgov/angular-components";
-import {FormControl, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {GoabButton, GoabButtonGroup, GoabDatePicker, GoabDivider, GoabFormItem} from "@abgov/angular-components";
+import {FormBuilder, FormControl, FormGroup, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { GoabDatePickerOnChangeDetail } from "@abgov/ui-components-common";
 
 @Component({
   selector: "app-date-picker",
@@ -13,12 +14,21 @@ import {FormControl, FormsModule, ReactiveFormsModule} from "@angular/forms";
     GoabButtonGroup,
     GoabDivider,
     GoabButton,
+    GoabFormItem,
   ],
 })
 export class DatePickerComponent {
   disabled = false;
   dateControl = new FormControl<Date|undefined>(new Date());
+  itemFormCtrl = new FormControl(new Date());
   value: Date|undefined = new Date();
+  form!: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    this.form = this.fb.group({
+      item: [new Date()],
+    })
+  }
 
   disableDatePicker() {
     this.dateControl.disable();
@@ -33,5 +43,11 @@ export class DatePickerComponent {
   resetDatePicker() {
     this.value = undefined;
     this.dateControl.patchValue(null);
+  }
+
+  item = new Date();
+  dateOnChange(event: GoabDatePickerOnChangeDetail) {
+    // handle change
+    console.log(event.value);
   }
 }

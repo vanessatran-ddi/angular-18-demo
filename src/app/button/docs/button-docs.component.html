@@ -1,0 +1,179 @@
+<goab-button type="secondary" size="normal" variant="normal" leadingIcon="add-circle" trailingIcon="airplane" (onClick)="onClick()">
+  Primary Button
+</goab-button>
+
+<goab-block gap="xl" direction="column">
+  <goab-form-item label="Street Address">
+    <goab-input name="address" type="text" value="" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+  </goab-form-item>
+  <goab-form-item label="Suite or unit #">
+    <goab-input name="suite" type="text" value="" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+  </goab-form-item>
+  <goab-form-item label="City/town">
+    <goab-input name="city" type="text" value="" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+  </goab-form-item>
+  <goab-block direction="row">
+    <goab-form-item label="Provice/territory">
+      <goab-dropdown (onChange)="dropdownOnChange($event)" name="province" value="alberta">
+        <goab-dropdown-item label="Alberta" value="alberta"></goab-dropdown-item>
+        <goab-dropdown-item label="BC" value="bc"></goab-dropdown-item>
+        <goab-dropdown-item label="Manitoba" value="manitoba"></goab-dropdown-item>
+        <goab-dropdown-item label="New Brunswick" value="new-brunswick"></goab-dropdown-item>
+        <goab-dropdown-item label="Newfoundland and Labrador" value="newfoundland"></goab-dropdown-item>
+        <goab-dropdown-item label="Nova Scotia" value="nova-scotia"></goab-dropdown-item>
+        <goab-dropdown-item label="Ontario" value="ontario"></goab-dropdown-item>
+        <goab-dropdown-item label="Prince Edward Island" value="prince-edward-island"></goab-dropdown-item>
+        <goab-dropdown-item label="Quebec" value="quebec"></goab-dropdown-item>
+        <goab-dropdown-item label="Saskatchewan" value="saskatchewan"></goab-dropdown-item>
+      </goab-dropdown>
+    </goab-form-item>
+    <goab-form-item label="Postal Code">
+      <goab-input name="postalCode" type="text" value="" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+    </goab-form-item>
+  </goab-block>
+</goab-block>
+<goab-button-group alignment="start" mt="2xl">
+  <goab-button type="primary" (onClick)="onClick()">
+    Submit and continue
+  </goab-button>
+  <goab-button type="secondary" (onClick)="onClick()">
+    Cancel
+  </goab-button>
+</goab-button-group>
+
+
+
+<goab-block gap="xl" direction="column">
+  <form [formGroup]="form">
+  <goab-form-item label="Street Address">
+    <goab-input name="address" formControlName="address" type="text" width="100%"></goab-input>
+  </goab-form-item>
+  <goab-form-item label="Suite or unit #">
+    <goab-input name="suite" formControlName="suite" type="text" width="100%"></goab-input>
+  </goab-form-item>
+  <goab-form-item label="City/town">
+    <goab-input name="city" formControlName="city" type="text" width="100%"></goab-input>
+  </goab-form-item>
+  <goab-block direction="row">
+    <goab-form-item label="Provice/territory">
+      <goab-dropdown name="province" value="alberta" formControlName="province">
+        <goab-dropdown-item label="Alberta" value="alberta"></goab-dropdown-item>
+        <goab-dropdown-item label="BC" value="bc"></goab-dropdown-item>
+        <goab-dropdown-item label="Manitoba" value="manitoba"></goab-dropdown-item>
+        <goab-dropdown-item label="New Brunswick" value="new-brunswick"></goab-dropdown-item>
+        <goab-dropdown-item label="Newfoundland and Labrador" value="newfoundland"></goab-dropdown-item>
+        <goab-dropdown-item label="Nova Scotia" value="nova-scotia"></goab-dropdown-item>
+        <goab-dropdown-item label="Ontario" value="ontario"></goab-dropdown-item>
+        <goab-dropdown-item label="Prince Edward Island" value="prince-edward-island"></goab-dropdown-item>
+        <goab-dropdown-item label="Quebec" value="quebec"></goab-dropdown-item>
+        <goab-dropdown-item label="Saskatchewan" value="saskatchewan"></goab-dropdown-item>
+      </goab-dropdown>
+    </goab-form-item>
+    <goab-form-item label="Postal Code">
+      <goab-input name="postalCode" formControlName="postalCode" type="text" width="100%"></goab-input>
+    </goab-form-item>
+  </goab-block>
+  </form>
+</goab-block>
+<goab-button-group alignment="start" mt="2xl">
+  <goab-button type="primary" (onClick)="onClick()">
+    Submit and continue
+  </goab-button>
+  <goab-button type="secondary" (onClick)="onClick()">
+    Cancel
+  </goab-button>
+</goab-button-group>
+
+
+<goab-block gap="xl" direction="column">
+  <form>
+    <goab-form-item label="Street Address">
+      <goab-input name="address" type="text"  (onChange)="inputOnChange($event)" width="100%" [(ngModel)]="address"></goab-input>
+    </goab-form-item>
+    <goab-form-item label="Suite or unit #">
+      <goab-input name="suite" type="text"  (onChange)="inputOnChange($event)" width="100%" [(ngModel)]="suite"></goab-input>
+    </goab-form-item>
+    <goab-form-item label="City/town">
+      <goab-input name="city" type="text"  (onChange)="inputOnChange($event)" width="100%" [(ngModel)]="city"></goab-input>
+    </goab-form-item>
+    <goab-block direction="row">
+      <goab-form-item label="Provice/territory">
+        <goab-dropdown (onChange)="dropdownOnChange($event)" name="province" value="alberta" [(ngModel)]="province">
+          <goab-dropdown-item label="Alberta" value="alberta"></goab-dropdown-item>
+          <goab-dropdown-item label="BC" value="bc"></goab-dropdown-item>
+          <goab-dropdown-item label="Manitoba" value="manitoba"></goab-dropdown-item>
+          <goab-dropdown-item label="New Brunswick" value="new-brunswick"></goab-dropdown-item>
+          <goab-dropdown-item label="Newfoundland and Labrador" value="newfoundland"></goab-dropdown-item>
+          <goab-dropdown-item label="Nova Scotia" value="nova-scotia"></goab-dropdown-item>
+          <goab-dropdown-item label="Ontario" value="ontario"></goab-dropdown-item>
+          <goab-dropdown-item label="Prince Edward Island" value="prince-edward-island"></goab-dropdown-item>
+          <goab-dropdown-item label="Quebec" value="quebec"></goab-dropdown-item>
+          <goab-dropdown-item label="Saskatchewan" value="saskatchewan"></goab-dropdown-item>
+        </goab-dropdown>
+      </goab-form-item>
+      <goab-form-item label="Postal Code">
+        <goab-input name="postalCode" type="text"  (onChange)="inputOnChange($event)" width="100%" [(ngModel)]="postalCode"></goab-input>
+      </goab-form-item>
+    </goab-block>
+  </form>
+</goab-block>
+<goab-button-group alignment="start" mt="2xl">
+  <goab-button type="primary" (onClick)="onClick()">
+    Submit and continue
+  </goab-button>
+  <goab-button type="secondary" (onClick)="onClick()">
+    Cancel
+  </goab-button>
+</goab-button-group>
+
+
+
+<goab-form-item label="Name" requirement="required">
+  <goab-input name="input" type="text" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+</goab-form-item>
+<goab-button-group alignment="start" mt="l">
+  <goab-button [disabled]="true" (onClick)="onClick()">
+    Confirm
+  </goab-button>
+  <goab-button type="secondary" (onClick)="onClick()">
+    Cancel
+  </goab-button>
+</goab-button-group>
+
+
+<goab-form-item label="Name" requirement="required">
+  <goab-input name="input" type="text" width="100%" formControlName="input"></goab-input>
+</goab-form-item>
+<goab-button-group alignment="start" mt="l">
+  <goab-button [disabled]="true" (onClick)="onClick()">
+    Confirm
+  </goab-button>
+  <goab-button type="secondary" (onClick)="onClick()">
+    Cancel
+  </goab-button>
+</goab-button-group>
+
+<goab-form-item label="Name" requirement="required">
+  <goab-input name="input" type="text" (onChange)="inputOnChange($event)" width="100%" [(ngModel)]="input"></goab-input>
+</goab-form-item>
+<goab-button-group alignment="start" mt="l">
+  <goab-button [disabled]="true" (onClick)="onClick()">
+    Confirm
+  </goab-button>
+  <goab-button type="secondary" (onClick)="onClick()">
+    Cancel
+  </goab-button>
+</goab-button-group>
+
+
+<goab-button-group alignment="center" gap="compact">
+  <goab-button type="primary" (onClick)="onClick()">
+    Button
+  </goab-button>
+  <goab-button type="secondary" (onClick)="onClick()">
+    Button
+  </goab-button>
+  <goab-button type="tertiary" (onClick)="onClick()">
+    Button
+  </goab-button>
+</goab-button-group>

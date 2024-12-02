@@ -17,3 +17,13 @@
 
 <goab-button (onClick)="resetDatePicker()">Reset</goab-button>
 <goab-date-picker [value]="value"></goab-date-picker>
+
+<h3>Docs</h3>
+<goab-form-item label="Item">
+  <goab-date-picker (onChange)="dateOnChange($event)" name="item" value="Wed Nov 27 2024 08:32:04 GMT-0700 (Mountain Standard Time)"></goab-date-picker>
+</goab-form-item>
+
+
+<goab-form-item label="Item" [formGroup]="form">
+  <goab-date-picker name="item" formControlName="item"></goab-date-picker>
+</goab-form-item>

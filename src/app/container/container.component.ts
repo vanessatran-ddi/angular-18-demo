@@ -1,5 +1,6 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA, OnInit} from '@angular/core';
 import {GoabBadge, GoabBlock, GoabButton, GoabContainer} from "@abgov/angular-components";
+import { ContainerDocsComponent } from "./docs/container-docs.component";
 
 @Component({
   selector: 'app-container',
@@ -8,18 +9,19 @@ import {GoabBadge, GoabBlock, GoabButton, GoabContainer} from "@abgov/angular-co
     GoabContainer,
     GoabBlock,
     GoabBadge,
-    GoabButton
+    GoabButton,
+    ContainerDocsComponent,
   ],
   templateUrl: './container.component.html',
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class ContainerComponent implements OnInit {
-  users: string[] = []
+  users: string[] = [];
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {
-    console.log("setting colors in 3 secs")
-    setTimeout(() => this.users = ["Chris", "James", "John"], 2000);
+    console.log('setting colors in 3 secs');
+    setTimeout(() => (this.users = ['Chris', 'James', 'John']), 2000);
   }
 }

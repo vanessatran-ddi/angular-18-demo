@@ -1,0 +1,9 @@
+<goab-form-item label="Basic" labelSize="regular" helpText="efef" error="d">
+  <goab-checkbox name="item" value="" [checked]="checked" text="Item" description="Testing description" [error]="true" ariaLabel="1234" maxWidth="100px" (onChange)="checkboxOnChange($event)"></goab-checkbox>
+</goab-form-item>
+
+<form>
+  <goab-form-item label="Basic">
+    <goab-checkbox name="item" text="Item"  (onChange)="checkboxOnChange($event)" [(ngModel)]="item"></goab-checkbox>
+  </goab-form-item>
+</form>
