@@ -30,3 +30,38 @@
   </p>
   <img src="https://picsum.photos/200" />
 </goab-details>
+
+<h1> Docs </h1>
+<goab-details heading="Detail Heading" maxWidth="120px">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vel lacinia metus, sed sodales lectus. Aliquam sed volutpat velit. Sed in lacus ut dui placerat accumsan malesuada quis erat. Aenean mi diam, rhoncus vitae justo eu, venenatis maximus nunc. In vel est commodo, porttitor sem vel, tincidunt ipsum. In hac habitasse platea dictumst. Mauris varius mollis dui. Aenean ut dui eu arcu rutrum auctor. Curabitur cursus velit vel libero sollicitudin tincidunt. Proin tincidunt, enim et ultrices rhoncus, nibh leo imperdiet sapien, sed porttitor ipsum nulla non massa. Nulla facilisi.
+</goab-details>
+
+
+<goab-form-item label="Do you pay for childcare?" helpText="Examples of child care include day care, day homes, and baby-sitters.">
+  <goab-radio-group name="pay" (onChange)="radioOnChange($event)">
+    <goab-radio-item label="Yes" value="yes" name="pay"></goab-radio-item>
+    <goab-radio-item label="No" value="no" name="pay"></goab-radio-item>
+  </goab-radio-group>
+</goab-form-item>
+<goab-details heading="Why are we asking this question?" mt="l">
+  <p>
+    This question helps us better understand your situation and ensure that you receive the right information and support.
+  </p>
+</goab-details>
+
+
+<goab-form-item label="Bank or Institution number" id="bankNumber" helpText="3-4 digits in length" mb="xl">
+  <goab-input [maxLength]="4" name="bankNumber" (onChange)="inputOnChange($event)" value="" ariaLabel="bankNumber" width="88px"></goab-input>
+</goab-form-item>
+<goab-form-item label="Branch or Transit number" helpText="5 digits in length" id="transitNumber" mb="xl">
+  <goab-input [maxLength]="5" name="transitNumber" (onChange)="inputOnChange($event)" value="" ariaLabel="transitNumber" width="143px"></goab-input>
+</goab-form-item>
+<goab-form-item label="Account number" helpText="3-12 digits in length" id="accountNumber">
+  <goab-input [maxLength]="12" name="accountNumber" value="" (onChange)="inputOnChange($event)" ariaLabel="accountNumber"></goab-input>
+</goab-form-item>
+<goab-details heading="Where can I find this information on a personal cheque?" mt="l">
+  <p>
+    Below is an example of where you can find the required bank information on a personal cheque.
+  </p>
+  <img src="/images/details-demo.jpg"/>
+</goab-details>
