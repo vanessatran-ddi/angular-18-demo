@@ -45,9 +45,36 @@ export class DatePickerComponent {
     this.dateControl.patchValue(null);
   }
 
-  item = new Date();
+  item: Date|undefined = new Date();
   dateOnChange(event: GoabDatePickerOnChangeDetail) {
     // handle change
     console.log(event.value);
+  }
+
+  // Reset example
+  onChange(event: GoabDatePickerOnChangeDetail) {
+    console.log(event.value);
+    this.item = event.value as Date;
+  }
+  setValue() {
+    this.item = new Date();
+  }
+  clearValue() {
+    this.item = undefined;
+  }
+
+  // reactive
+  dateCtrl = new FormControl();
+
+  setValue1() {
+    const d = new Date();
+    d.setDate(d.getDate() - 7);
+    this.dateCtrl.patchValue(d);
+    console.log("setValue called: ", this.dateCtrl.value);
+  }
+
+  clearValue1() {
+    this.dateCtrl.reset();
+    console.log("reset called: ", this.dateCtrl.value);
   }
 }

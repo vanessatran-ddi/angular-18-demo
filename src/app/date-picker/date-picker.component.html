@@ -27,3 +27,29 @@
 <goab-form-item label="Item" [formGroup]="form">
   <goab-date-picker name="item" formControlName="item"></goab-date-picker>
 </goab-form-item>
+
+<goab-form-item label="Item">
+  <goab-date-picker (onChange)="dateOnChange($event)" name="item" [(ngModel)]="item"></goab-date-picker>
+</goab-form-item>
+
+
+<goab-form-item label="Item">
+  <goab-date-picker (onChange)="onChange($event)" name="item" [value]="item"></goab-date-picker>
+</goab-form-item>
+
+<goab-button-group alignment="start" mt="xs">
+  <goab-button (onClick)="setValue()" mr="l">Set Value</goab-button>
+  <goab-button (onClick)="clearValue()">Clear Value</goab-button>
+</goab-button-group>
+
+
+<!--reactive-->
+
+<goab-form-item label="Input Label" helpText="Helper text" mb="3xl">
+  <goab-date-picker [formControl]="dateCtrl" [value]="dateControl.value"/>
+</goab-form-item>
+
+<goab-button-group alignment="start" mt="xs">
+  <goab-button (onClick)="setValue1()" mr="l">Set Value</goab-button>
+  <goab-button (onClick)="clearValue1()">Clear Value</goab-button>
+</goab-button-group>
