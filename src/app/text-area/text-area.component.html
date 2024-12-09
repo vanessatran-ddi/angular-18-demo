@@ -11,6 +11,9 @@
   Input Value: {{ form.controls["input"].value | json }}
 </div>
 
+<h3>Read only</h3>
+<goa-textarea name="comment" readonly="true" value="copy text only"></goa-textarea>
+
 
 <h2>Basic</h2>
 <goa-textarea name="comment-basic" (onChange)="onChange($event)" value="Initial value"></goa-textarea>
