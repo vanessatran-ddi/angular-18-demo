@@ -1,12 +1,15 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {
   GoabBlock,
-  GoabButton,
+  GoabButton, GoabDivider,
   GoabDropdown, GoabDropdownItem,
   GoabFormItem,
   GoabInput
 } from "@abgov/angular-components";
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/forms";
+import {FormItemSandboxComponent} from "./docs/form-item-sandbox.component";
+import {FormItemExample1Component} from "./docs/form-item-example1.component";
+import {FormItemExample2Component} from "./docs/form-item-example2.component";
 
 @Component({
   selector: 'app-form-item',
@@ -19,6 +22,10 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from "@angular/
     GoabDropdown,
     GoabDropdownItem,
     ReactiveFormsModule,
+    FormItemSandboxComponent,
+    FormItemExample1Component,
+    GoabDivider,
+    FormItemExample2Component,
   ],
   templateUrl: './form-item.component.html',
   styleUrl: './form-item.component.css',

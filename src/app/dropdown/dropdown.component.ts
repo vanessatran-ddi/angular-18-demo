@@ -1,9 +1,21 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import { GoabContainer, GoabDatePicker, GoabDropdown, GoabDropdownItem, GoabFormItem, GoabInput, GoabSpacer } from "@abgov/angular-components";
+import {
+  GoabContainer,
+  GoabDatePicker,
+  GoabDivider,
+  GoabDropdown,
+  GoabDropdownItem,
+  GoabFormItem,
+  GoabInput,
+  GoabSpacer
+} from "@abgov/angular-components";
 import { GoabDatePickerOnChangeDetail, GoabDropdownOnChangeDetail } from "@abgov/ui-components-common";
 import { CommonModule } from "@angular/common";
 import {FormBuilder, FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
 import {Countries, CountrySubdivisions} from "./countries.data";
+import {DropdownSandboxComponent} from "./docs/dropdown-sandbox.component";
+import {DropdownExample1Component} from "./docs/dropdown-example1.component";
+import {DropdownExample2Component} from "./docs/dropdown-example2.component";
 
 @Component({
   selector: 'app-dropdown',
@@ -18,6 +30,11 @@ import {Countries, CountrySubdivisions} from "./countries.data";
     GoabSpacer,
     ReactiveFormsModule,
     CommonModule,
+    DropdownSandboxComponent,
+    DropdownSandboxComponent,
+    GoabDivider,
+    DropdownExample1Component,
+    DropdownExample2Component,
   ],
   templateUrl: './dropdown.component.html',
   styleUrl: './dropdown.component.css',

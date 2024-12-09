@@ -1,0 +1,16 @@
+<goab-form-item label="Basic dropdown" [formGroup]="form">
+  <goab-dropdown name="item" value="red" formControlName="item">
+    <goab-dropdown-item value="red" label="Red"></goab-dropdown-item>
+    <goab-dropdown-item value="green" label="Green"></goab-dropdown-item>
+    <goab-dropdown-item value="blue" label="Blue"></goab-dropdown-item>
+  </goab-dropdown>
+</goab-form-item>
+
+
+<goab-form-item label="Basic dropdown">
+  <goab-dropdown name="item" value="" (onChange)="dropdownOnChange($event)">
+    <goab-dropdown-item value="red" label="Red"></goab-dropdown-item>
+    <goab-dropdown-item value="green" label="Green"></goab-dropdown-item>
+    <goab-dropdown-item value="blue" label="Blue"></goab-dropdown-item>
+  </goab-dropdown>
+</goab-form-item>

@@ -1,6 +1,6 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule} from "@angular/common";
-import {GoabFileUploadCard, GoabFileUploadInput} from "@abgov/angular-components";
+import {GoabFileUploadCard, GoabFileUploadInput, GoabFormItem} from "@abgov/angular-components";
 interface Uploader {
   upload: (url: string | ArrayBuffer) => void;
   abort: () => void;
@@ -32,6 +32,7 @@ class MockUploader implements Uploader {
     GoabFileUploadInput,
     GoabFileUploadCard,
     CommonModule,
+    GoabFormItem,
   ],
   templateUrl: './file-upload.component.html',
   styleUrl: './file-upload.component.css',

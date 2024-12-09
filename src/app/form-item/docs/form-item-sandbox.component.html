@@ -1,0 +1,7 @@
+<goab-form-item label="First name">
+  <goab-input (onChange)="inputOnChange($event)" [value]="value" name="item"></goab-input>
+</goab-form-item>
+
+<goab-form-item label="First name" [formGroup]="form">
+  <goab-input  name="item" formControlName="item"></goab-input>
+</goab-form-item>
