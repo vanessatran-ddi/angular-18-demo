@@ -1,0 +1,84 @@
+<goab-form-item label="When is your birthday?" labelSize="large" helpText="For example, 27 November 2004">
+  <goab-block gap="m" direction="row">
+    <goab-form-item label="Day">
+      <goab-input (onChange)="inputOnChange($event)" value="" name="day" width="6ch"></goab-input>
+    </goab-form-item>
+    <goab-form-item label="Month">
+      <goab-dropdown (onChange)="dropdownOnChange($event)" name="month" value="">
+        <goab-dropdown-item label="January" value="January"></goab-dropdown-item>
+        <goab-dropdown-item label="February" value="February"></goab-dropdown-item>
+        <goab-dropdown-item label="March" value="March"></goab-dropdown-item>
+        <goab-dropdown-item label="April" value="April"></goab-dropdown-item>
+        <goab-dropdown-item label="May" value="May"></goab-dropdown-item>
+        <goab-dropdown-item label="June" value="June"></goab-dropdown-item>
+        <goab-dropdown-item label="July" value="July"></goab-dropdown-item>
+        <goab-dropdown-item label="August" value="August"></goab-dropdown-item>
+        <goab-dropdown-item label="September" value="September"></goab-dropdown-item>
+        <goab-dropdown-item label="October" value="October"></goab-dropdown-item>
+        <goab-dropdown-item label="November" value="November"></goab-dropdown-item>
+        <goab-dropdown-item label="December" value="December"></goab-dropdown-item>
+      </goab-dropdown>
+    </goab-form-item>
+    <goab-form-item label="Year">
+      <goab-input (onChange)="inputOnChange($event)" value="" name="year" width="10ch"></goab-input>
+    </goab-form-item>
+  </goab-block>
+</goab-form-item>
+
+
+<h3>Reactive</h3>
+<goab-form-item label="When is your birthday?" labelSize="large" helpText="For example, 27 November 2004">
+  <goab-block gap="m" direction="row">
+    <goab-form-item [formGroup]="form" label="Day">
+      <goab-input name="day" width="6ch" formControlName="day"></goab-input>
+    </goab-form-item>
+    <goab-form-item [formGroup]="form" label="Month">
+      <goab-dropdown name="month" formControlName="month">
+        <goab-dropdown-item label="January" value="January"></goab-dropdown-item>
+        <goab-dropdown-item label="February" value="February"></goab-dropdown-item>
+        <goab-dropdown-item label="March" value="March"></goab-dropdown-item>
+        <goab-dropdown-item label="April" value="April"></goab-dropdown-item>
+        <goab-dropdown-item label="May" value="May"></goab-dropdown-item>
+        <goab-dropdown-item label="June" value="June"></goab-dropdown-item>
+        <goab-dropdown-item label="July" value="July"></goab-dropdown-item>
+        <goab-dropdown-item label="August" value="August"></goab-dropdown-item>
+        <goab-dropdown-item label="September" value="September"></goab-dropdown-item>
+        <goab-dropdown-item label="October" value="October"></goab-dropdown-item>
+        <goab-dropdown-item label="November" value="November"></goab-dropdown-item>
+        <goab-dropdown-item label="December" value="December"></goab-dropdown-item>
+      </goab-dropdown>
+    </goab-form-item>
+    <goab-form-item [formGroup]="form" label="Year">
+      <goab-input name="year" width="10ch" formControlName="year"></goab-input>
+    </goab-form-item>
+  </goab-block>
+</goab-form-item>
+
+
+<h3>Template driven</h3>
+<goab-form-item label="When is your birthday?" labelSize="large" helpText="For example, 27 November 2004">
+  <goab-block gap="m" direction="row">
+    <goab-form-item label="Day">
+      <goab-input (onChange)="inputOnChange($event)"  name="day" width="6ch" [(ngModel)]="day"></goab-input>
+    </goab-form-item>
+    <goab-form-item label="Month">
+      <goab-dropdown (onChange)="dropdownOnChange($event)" name="month"  [(ngModel)]="month">
+        <goab-dropdown-item label="January" value="January"></goab-dropdown-item>
+        <goab-dropdown-item label="February" value="February"></goab-dropdown-item>
+        <goab-dropdown-item label="March" value="March"></goab-dropdown-item>
+        <goab-dropdown-item label="April" value="April"></goab-dropdown-item>
+        <goab-dropdown-item label="May" value="May"></goab-dropdown-item>
+        <goab-dropdown-item label="June" value="June"></goab-dropdown-item>
+        <goab-dropdown-item label="July" value="July"></goab-dropdown-item>
+        <goab-dropdown-item label="August" value="August"></goab-dropdown-item>
+        <goab-dropdown-item label="September" value="September"></goab-dropdown-item>
+        <goab-dropdown-item label="October" value="October"></goab-dropdown-item>
+        <goab-dropdown-item label="November" value="November"></goab-dropdown-item>
+        <goab-dropdown-item label="December" value="December"></goab-dropdown-item>
+      </goab-dropdown>
+    </goab-form-item>
+    <goab-form-item label="Year">
+      <goab-input (onChange)="inputOnChange($event)"  name="year" width="10ch" [(ngModel)]="year"></goab-input>
+    </goab-form-item>
+  </goab-block>
+</goab-form-item>

@@ -1,0 +1,15 @@
+<goab-form-item label="Tuition">
+  <goab-input (onChange)="onChangeTuitionAmount($event)" value="" name="tuition" mb="xl">
+    <div slot="leadingContent">$</div>
+  </goab-input>
+</goab-form-item>
+<goab-form-item label="Books/Supplies/Instruments">
+  <goab-input (onChange)="onChangeSuppliesAmount($event)" value="" name="book" mb="xl">
+    <div slot="leadingContent">$</div>
+  </goab-input>
+</goab-form-item>
+<goab-form-item label="Other costs">
+  <goab-input (onChange)="onChangeOthersAmount($event)" value="" name="others">
+    <div slot="leadingContent">$</div>
+  </goab-input>
+</goab-form-item>

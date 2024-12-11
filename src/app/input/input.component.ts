@@ -1,8 +1,16 @@
 import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, ReactiveFormsModule} from "@angular/forms";
-import {GoabBadge, GoabDatePicker, GoabFormItem, GoabInput} from "@abgov/angular-components";
+import {GoabBadge, GoabDatePicker, GoabDivider, GoabFormItem, GoabInput} from "@abgov/angular-components";
 import {JsonPipe} from "@angular/common";
 import { format, parseISO } from "date-fns";
+import {InputDollarAmountExampleComponent} from "./docs/input-dollar-amount-example.component";
+import {InputSandboxComponent} from "./docs/input-sandbox.component";
+import {AskUserForAddressExampleComponent} from "./docs/ask-user-for-address-example.component";
+import {AskUserBirthdayExampleComponent} from "./docs/ask-user-birthday-example.component";
+import {SearchExampleComponent} from "./docs/search-example.component";
+import {
+  AskUserIndianRegistrationNumberExampleComponent
+} from "./docs/ask-user-indian-registration-number-example.component";
 interface User {
   firstName: string;
   lastName: string;
@@ -18,6 +26,13 @@ interface User {
     GoabFormItem,
     JsonPipe,
     ReactiveFormsModule,
+    GoabDivider,
+    InputDollarAmountExampleComponent,
+    InputSandboxComponent,
+    AskUserForAddressExampleComponent,
+    AskUserBirthdayExampleComponent,
+    SearchExampleComponent,
+    AskUserIndianRegistrationNumberExampleComponent,
   ],
   templateUrl: './input.component.html',
   styleUrl: './input.component.css'

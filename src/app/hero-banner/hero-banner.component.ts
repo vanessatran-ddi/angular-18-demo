@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
 import {
   GoabButton,
-  GoabButtonGroup,
+  GoabButtonGroup, GoabDivider,
   GoabHeroBanner,
 } from "@abgov/angular-components";
+import {HeroBannerWithActionsComponent} from "./docs/hero-banner-with-actions.component";
 
 @Component({
   selector: 'app-hero-banner',
@@ -12,6 +13,8 @@ import {
     GoabHeroBanner,
     GoabButton,
     GoabButtonGroup,
+    HeroBannerWithActionsComponent,
+    GoabDivider,
   ],
   templateUrl: './hero-banner.component.html',
   styleUrl: './hero-banner.component.css'

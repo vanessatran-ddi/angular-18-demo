@@ -1,0 +1,12 @@
+<goab-form-stepper testId="foo" [step]="step" (onChange)="onChange($event)">
+  <goab-form-step text="Personal details"></goab-form-step>
+  <goab-form-step text="Employment history"></goab-form-step>
+  <goab-form-step text="References"></goab-form-step>
+  <goab-form-step text="Review"></goab-form-step>
+</goab-form-stepper>
+<goab-pages [current]="step" mb="3xl">
+  <div>Page 1 content</div>
+  <div>Page 2 content</div>
+  <div>Page 3 content</div>
+  <div>Page 4 content</div>
+</goab-pages>

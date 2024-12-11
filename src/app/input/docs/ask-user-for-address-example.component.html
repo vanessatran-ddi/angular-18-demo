@@ -1,0 +1,60 @@
+<goab-form-item label="Street Address">
+  <goab-input name="address" type="text" value="" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+</goab-form-item>
+<goab-form-item label="Suite or unit #">
+  <goab-input name="suite" type="text" value="" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+</goab-form-item>
+<goab-form-item label="City/town">
+  <goab-input name="city" type="text" value="" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+</goab-form-item>
+<goab-block direction="row">
+  <goab-form-item label="Provice/territory">
+    <goab-dropdown (onChange)="dropdownOnChange($event)" name="province" value="alberta">
+      <goab-dropdown-item label="Alberta" value="alberta"></goab-dropdown-item>
+      <goab-dropdown-item label="BC" value="bc"></goab-dropdown-item>
+      <goab-dropdown-item label="Manitoba" value="manitoba"></goab-dropdown-item>
+      <goab-dropdown-item label="New Brunswick" value="new-brunswick"></goab-dropdown-item>
+      <goab-dropdown-item label="Newfoundland and Labrador" value="newfoundland"></goab-dropdown-item>
+      <goab-dropdown-item label="Nova Scotia" value="nova-scotia"></goab-dropdown-item>
+      <goab-dropdown-item label="Ontario" value="ontario"></goab-dropdown-item>
+      <goab-dropdown-item label="Prince Edward Island" value="prince-edward-island"></goab-dropdown-item>
+      <goab-dropdown-item label="Quebec" value="quebec"></goab-dropdown-item>
+      <goab-dropdown-item label="Saskatchewan" value="saskatchewan"></goab-dropdown-item>
+    </goab-dropdown>
+  </goab-form-item>
+  <goab-form-item label="Postal Code">
+    <goab-input name="postalCode" type="text" value="" (onChange)="inputOnChange($event)" width="100%"></goab-input>
+  </goab-form-item>
+</goab-block>
+
+
+<h3>Reactive</h3>
+
+<goab-form-item label="Street Address">
+  <goab-input name="address" type="text" width="100%" formControlName="address"></goab-input>
+</goab-form-item>
+<goab-form-item label="Suite or unit #">
+  <goab-input name="suite" type="text" width="100%" formControlName="suite"></goab-input>
+</goab-form-item>
+<goab-form-item label="City/town">
+  <goab-input name="city" type="text" width="100%" formControlName="city"></goab-input>
+</goab-form-item>
+<goab-block direction="row">
+  <goab-form-item [formGroup]="form" label="Provice/territory">
+    <goab-dropdown name="province" value="alberta" formControlName="province">
+      <goab-dropdown-item label="Alberta" value="alberta"></goab-dropdown-item>
+      <goab-dropdown-item label="BC" value="bc"></goab-dropdown-item>
+      <goab-dropdown-item label="Manitoba" value="manitoba"></goab-dropdown-item>
+      <goab-dropdown-item label="New Brunswick" value="new-brunswick"></goab-dropdown-item>
+      <goab-dropdown-item label="Newfoundland and Labrador" value="newfoundland"></goab-dropdown-item>
+      <goab-dropdown-item label="Nova Scotia" value="nova-scotia"></goab-dropdown-item>
+      <goab-dropdown-item label="Ontario" value="ontario"></goab-dropdown-item>
+      <goab-dropdown-item label="Prince Edward Island" value="prince-edward-island"></goab-dropdown-item>
+      <goab-dropdown-item label="Quebec" value="quebec"></goab-dropdown-item>
+      <goab-dropdown-item label="Saskatchewan" value="saskatchewan"></goab-dropdown-item>
+    </goab-dropdown>
+  </goab-form-item>
+  <goab-form-item [formGroup]="form" label="Postal Code">
+    <goab-input name="postalCode" type="text" width="100%" formControlName="postalCode"></goab-input>
+  </goab-form-item>
+</goab-block>

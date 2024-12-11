@@ -1,0 +1,14 @@
+<goab-radio-group name="device" value="deviceWidth" (onChange)="changeDeviceWidth($event)">
+  <goab-radio-item value="600" label="Desktop"></goab-radio-item>
+  <goab-radio-item value="5000" label="Mobile"></goab-radio-item>
+</goab-radio-group>
+
+<goab-app-header url="https://example.com" heading="Design System" [fullMenuBreakpoint]="deviceWidth" (onMenuClick)="handleMenuClick()">
+  <a href="#">Support</a>
+  <goab-app-header-menu heading="Tickets" leadingIcon="ticket">
+    <a href="#">Cases</a>
+    <a href="#">Payments</a>
+    <a href="#">Outstanding</a>
+  </goab-app-header-menu>
+  <a href="#" class="interactive">Sign in</a>
+</goab-app-header>

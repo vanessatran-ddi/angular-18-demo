@@ -1,0 +1,20 @@
+<goab-block gap="xs" direction="row">
+  <goab-input type="search" name="search" value="" (onChange)="inputOnChange($event)" leadingIcon="search"></goab-input>
+  <goab-button type="primary" (onClick)="onClick()">
+    Search
+  </goab-button>
+</goab-block>
+
+<goab-block gap="xs" direction="row" [formGroup]="form">
+  <goab-input type="search" name="search" leadingIcon="search" formControlName="search"></goab-input>
+  <goab-button type="primary" (onClick)="onClick()">
+    Search
+  </goab-button>
+</goab-block>
+
+<goab-block gap="xs" direction="row">
+  <goab-input type="search" name="search"  (onChange)="inputOnChange($event)" leadingIcon="search" [(ngModel)]="search"></goab-input>
+  <goab-button type="primary" (onClick)="onClick()">
+    Search
+  </goab-button>
+</goab-block>

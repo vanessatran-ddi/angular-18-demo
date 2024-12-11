@@ -1,0 +1,9 @@
+<h3>Reactive code</h3>
+<goab-form-item label="Basic" [formGroup]="form">
+  <goab-input name="item"  width="20ch" formControlName="item"></goab-input>
+</goab-form-item>
+
+<h3>Template driven</h3>
+<goab-form-item label="Basic">
+  <goab-input name="item"  width="20ch" (onChange)="inputOnChange($event)" [(ngModel)]="item"></goab-input>
+</goab-form-item>

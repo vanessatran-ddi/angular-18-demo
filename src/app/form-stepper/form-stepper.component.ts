@@ -1,6 +1,13 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
-import {GoabButton, GoabFormStep, GoabFormStepper, GoabPages} from "@abgov/angular-components";
+import {GoabButton, GoabDivider, GoabFormStep, GoabFormStepper, GoabPages} from "@abgov/angular-components";
 import {GoabFormStepperOnChangeDetail, GoabFormStepStatus} from "@abgov/ui-components-common";
+import {FormStepperSandboxComponent} from "./docs/form-stepper-sandbox.component";
+import {
+  FormStepperControlledNavigationExampleComponent
+} from "./docs/form-stepper-controlled-navigation-example.component";
+import {
+  FormStepperStepStatusExampleComponent
+} from "./docs/form-stepper-step-status-example.component";
 
 @Component({
   selector: 'app-form-stepper',
@@ -10,6 +17,10 @@ import {GoabFormStepperOnChangeDetail, GoabFormStepStatus} from "@abgov/ui-compo
     GoabFormStep,
     GoabPages,
     GoabButton,
+    FormStepperSandboxComponent,
+    GoabDivider,
+    FormStepperControlledNavigationExampleComponent,
+    FormStepperStepStatusExampleComponent,
   ],
   templateUrl: './form-stepper.component.html',
   styleUrl: './form-stepper.component.css',
