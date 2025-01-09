@@ -1,12 +1,22 @@
 import { Component } from '@angular/core';
 import {
   GoabButton,
-  GoabButtonGroup, GoabDropdown, GoabDropdownItem,
+  GoabButtonGroup, GoabDivider, GoabDropdown, GoabDropdownItem,
   GoabFormItem,
   GoabInput,
   GoabModal
 } from "@abgov/angular-components";
 import {Router} from "@angular/router";
+import {BasicModalExampleComponent} from "./examples/basic-modal-example.component";
+import {
+  ConfirmDestructiveModalExampleComponent
+} from "./examples/confirm-destructive-modal-example.component";
+import {WarnUserDeadlineModalExampleComponent} from "./examples/warn-user-deadline-modal-example.component";
+import {
+  ConfirmRecordChangeModalExampleComponent
+} from "./examples/confirm-record-change-modal-example.component";
+import {AddAnotherItemModalExampleComponent} from "./examples/add-another-item-modal-example.component";
+import {RouteChangeModalExampleComponent} from "./examples/route-change-modal-example.component";
 
 @Component({
   selector: 'app-modal',
@@ -17,7 +27,7 @@ import {Router} from "@angular/router";
     GoabFormItem,
     GoabInput,
     GoabDropdown,
-    GoabDropdownItem,],
+    GoabDropdownItem, BasicModalExampleComponent, GoabDivider, ConfirmDestructiveModalExampleComponent, WarnUserDeadlineModalExampleComponent, ConfirmRecordChangeModalExampleComponent, AddAnotherItemModalExampleComponent, RouteChangeModalExampleComponent,],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.css'
 })

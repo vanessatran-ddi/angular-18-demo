@@ -1,0 +1,10 @@
+<goab-button (onClick)="toggleModal();">Open Basic Modal</goab-button>
+<goab-modal [open]="open" (close)="toggleModal()" heading="Heading" [actions]="actions">
+  <p>Content</p>
+  <ng-template #actions>
+    <goab-button-group alignment="end">
+      <goab-button type="secondary" (onClick)="toggleModal()">Secondary</goab-button>
+      <goab-button type="primary" (onClick)="toggleModal()">Primary</goab-button>
+    </goab-button-group>
+  </ng-template>
+</goab-modal>
