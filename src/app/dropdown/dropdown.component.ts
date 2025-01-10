@@ -102,16 +102,16 @@ export class DropdownComponent implements OnInit {
   }
 
   onChange(event: any) {
-    console.log("select change dynamic color ", event.detail.value, event);
+    console.log("onChange with event", event);
   }
   ngOnInit() {
     // this.colors = ["red", "green", "blue"]
    setTimeout(() => this.colors = ["red", "green", "blue"], 1);
     console.log("this.colors ", this.colors);
     // listen to fg changes
-    // this.fg.valueChanges.subscribe(value => {
-    //   console.log('Form value changed:', value);
-    // });
+    this.fg.valueChanges.subscribe(value => {
+      console.log('Form value changed:', value);
+    });
   }
 
 

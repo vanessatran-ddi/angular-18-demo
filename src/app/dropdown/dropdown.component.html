@@ -63,13 +63,31 @@
 <!--<button>stop</button>-->
 
 
-<!--<form [formGroup]="fg" novalidate autocomplete="on" onsubmit="submit">-->
+<form [formGroup]="fg" novalidate autocomplete="on">
+  <goa-form-item label="Business Name">
+    <goa-input name="businessName" [value]="fg.controls.businessName.value" width="20ch" (_change)="onChange($event)"></goa-input>
+  </goa-form-item>
+  <goa-form-item label="Country Text Input">
+    <goa-input name="country" [value]="fg.controls.country.value" width="20ch" (_change)="onChange($event)"></goa-input>
+  </goa-form-item>
+  <goa-form-item label="Country">
+    <goa-dropdown name="country" [value]="fg.controls.country.value" (_change)="onChange($event)" filterable="true">
+            @for(opt of countries; track opt) {
+              <goa-dropdown-item
+                name="country"
+                [value]="opt.code"
+                [label]="opt.name"
+              ></goa-dropdown-item>
+            }
+    </goa-dropdown>
+  </goa-form-item>
+
 <!--  <goa-form-item label="Business Name"-->
 <!--                 helptext="The name that will identify the business throughout APC. Use an “operating as” name for numbered businesses">-->
 <!--    <goa-input-->
 <!--      goaValue-->
 <!--      name="businessName"-->
-<!--      [value]="fg.value.businessName"-->
+<!--      [value]="fg.controls.businessName.value"-->
 <!--      [formControl]="fg.controls.businessName"-->
 <!--    ></goa-input>-->
 <!--  </goa-form-item>-->
