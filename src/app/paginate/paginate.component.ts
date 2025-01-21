@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
-import {GoabPagination, GoabTable} from "@abgov/angular-components";
+import { GoabDivider, GoabPagination, GoabTable } from "@abgov/angular-components";
 import {GoabPaginationOnChangeDetail} from "@abgov/ui-components-common";
 import { faker } from "@faker-js/faker";
+import { PaginateSandboxExampleComponent } from "./docs/paginate-sandbox-example.component";
+import { PaginateShowXPerPageExampleComponent } from "./docs/paginate-show-x-per-page-example.component";
 interface User {
   id: string;
   firstName: string;
@@ -12,10 +14,15 @@ interface User {
 @Component({
   selector: 'app-paginate',
   standalone: true,
-  imports: [GoabPagination,
-    GoabTable,],
+  imports: [
+    GoabPagination,
+    GoabTable,
+    PaginateSandboxExampleComponent,
+    GoabDivider,
+    PaginateShowXPerPageExampleComponent,
+  ],
   templateUrl: './paginate.component.html',
-  styleUrl: './paginate.component.css'
+  styleUrl: './paginate.component.css',
 })
 export class PaginateComponent {
   users: User[] = [];
