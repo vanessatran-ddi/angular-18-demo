@@ -1,0 +1,16 @@
+<goab-table width="100%" mb="xl" (onSort)="handleSort($event)">
+  <thead>
+  <tr>
+    <th><goab-table-sort-header name="firstName">First name and really long header</goab-table-sort-header></th>
+    <th><goab-table-sort-header name="lastName">Last name</goab-table-sort-header></th>
+    <th><goab-table-sort-header name="age" direction="asc">Age</goab-table-sort-header></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let user of users; index as i">
+    <td>{{ user.firstName }}</td>
+    <td>{{ user.lastName }}</td>
+    <td>{{ user.age }}</td>
+  </tr>
+  </tbody>
+</goab-table>
