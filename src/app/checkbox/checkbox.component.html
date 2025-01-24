@@ -3,5 +3,7 @@
 </goa-form-item>
 <p>{{itemFormCtrl.value}}</p>
 <goa-form-item label="Basic">
-  <goa-checkbox name="item" goaValue text="Item" [formControl]="itemFormCtrl" [value]="itemFormCtrl.value"></goa-checkbox>
+  <goa-checkbox name="item" goaValue [formControl]="itemFormCtrl" [value]="itemFormCtrl.value">
+    <div>Default slot</div>
+  </goa-checkbox>
 </goa-form-item>
