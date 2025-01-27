@@ -1,0 +1,19 @@
+<h2>You have completed the application</h2>
+
+<goab-callout type="success" [heading]="heading">
+  <ng-template #heading>Your application was successful</ng-template>
+  <p>You will receive a copy of the confirmation to the email person&#64;email.com</p>
+  <p>Confirmation number: <strong>1234ABC</strong></p>
+</goab-callout>
+
+<h3>Go back to the dashboard, or direct your user somewhere else useful.</h3>
+<p>
+  Other information about what was just completed, other tertiary information, and/or contact information.
+  Phone: <a href="tel:7801234567">780 123 4567</a>
+  Email: <a href="mailto:information&#64;gov.ab.ca">information&#64;gov.ab.ca</a>
+</p>
+
+<goab-button-group alignment="start">
+  <goab-button type="primary">Go to application</goab-button>
+  <goab-button type="secondary">Back to dashboard</goab-button>
+</goab-button-group>
