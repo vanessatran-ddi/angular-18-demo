@@ -14,6 +14,12 @@
 <goab-divider mt="2xl" mb="2xl"></goab-divider>
 <!-- <goab-date-picker [formControl]="reactiveDate2FormCtrl"></goab-date-picker> -->
 
+<form [formGroup]="fg">
+  <goab-input name="item"></goab-input>
+</form>
+
+
+
 <h2>Basic</h2>
 <goab-input id="foo1" name="foo" (onChange)="onInputChangeEvent($event)"></goab-input>
 

@@ -38,6 +38,9 @@ interface User {
   styleUrl: './input.component.css'
 })
 export class InputComponent implements OnInit {
+  fg!: FormGroup;
+
+
   date = new Date();
   boundDate = format(this.date, "yyyy-MM-dd");
   formatDate = format(this.date, "yyyy-MM-dd");
