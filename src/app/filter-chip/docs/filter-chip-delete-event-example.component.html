@@ -1,0 +1,7 @@
+<h2>Delete event</h2>
+<goab-filter-chip
+  *ngFor="let chip of chips"
+  [content]="chip"
+  (onClick)="deleteChip(chip)"
+  mr="s">
+</goab-filter-chip>
