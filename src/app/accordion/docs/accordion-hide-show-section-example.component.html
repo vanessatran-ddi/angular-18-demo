@@ -1,0 +1,19 @@
+<goa-button type="tertiary" mb="m" (_click)="onClick()">
+  {{ accordionStatus }}
+</goa-button>
+
+<goa-accordion heading="How do I create an account?" headingsize="medium" [open]="expandedList[0]" (_change)="toggleAccordion(0, $event)">
+  To create an account, you will need to contact your office admin.
+</goa-accordion>
+
+<goa-accordion heading="What verification is needed to sign documents digitally?" headingsize="medium" [open]="expandedList[1]" (_change)="toggleAccordion(1, $event)">
+  You will need to verify your identity through our two-factor authentication in addition to the digital signature.
+</goa-accordion>
+
+<goa-accordion heading="Can I track the status of my service requests online?" headingsize="medium" [open]="expandedList[2]" (_change)="toggleAccordion(2, $event)">
+  Yes, you can see the status of your application on the main service dashboard when you log in. You will receive updates and notifications in your email as your request progresses.
+</goa-accordion>
+
+<goa-accordion heading="Is your digital service accessible?" headingsize="medium" [open]="expandedList[3]" (_change)="toggleAccordion(3, $event)">
+  Yes, our digital service is designed with accessibility in mind. <a href="#">More information on accessibility.</a>
+</goa-accordion>

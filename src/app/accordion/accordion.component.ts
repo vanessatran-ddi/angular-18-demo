@@ -1,9 +1,13 @@
 // import {GoABAccordion, GoABButton, GoABBadge} from '@abgov/angular-components';
 import { Component, CUSTOM_ELEMENTS_SCHEMA } from "@angular/core";
+import {
+  AccordionHideShowSectionExampleComponent
+} from "./docs/accordion-hide-show-section-example.component";
 
 @Component({
   selector: 'app-accordion',
   standalone: true,
+  imports: [AccordionHideShowSectionExampleComponent],
   // imports: [GoABAccordion, GoABButton, GoABBadge],
   templateUrl: './accordion.component.html',
   schemas: [CUSTOM_ELEMENTS_SCHEMA]

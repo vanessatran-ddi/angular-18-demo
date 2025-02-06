@@ -1,14 +1,12 @@
 import {Component, CUSTOM_ELEMENTS_SCHEMA} from "@angular/core";
 import {NgForOf} from "@angular/common";
-import {
-  FilterChipDeleteEventExampleComponent
-} from "./docs/filter-chip-delete-event-example.component";
+
 
 @Component({
   selector: 'abgov-chip',
   standalone: true,
   templateUrl: './filter-chip.component.html',
-  imports: [NgForOf, FilterChipDeleteEventExampleComponent],
+  imports: [NgForOf],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class FilterChipComponent {
